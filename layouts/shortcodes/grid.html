@@ -1,0 +1,12 @@
+{{/*
+  grid.html — шорткод для адаптивной сетки
+  Параметры: columns, gap, style
+*/}}
+
+{{ $columns := .Get "columns" | default "3" }}
+{{ $gap := .Get "gap" | default "20" }}
+{{ $style := .Get "style" | default "cards" }}
+
+<div class="custom-grid grid-{{ $style }}" style="--grid-columns:{{ $columns }}; --grid-gap:{{ $gap }}px;">
+  {{ .Inner }}
+</div> 

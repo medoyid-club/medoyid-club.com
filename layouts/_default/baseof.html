@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ partial "head.html" . }}
+    <link rel="stylesheet" href="/css/custom.css">
+  </head>
+  <body>
+    <div class="container" style="min-height:100vh;display:flex;flex-direction:row;">
+      <!-- Левая колонка: меню -->
+      <aside style="width:260px;min-width:200px;max-width:300px;padding:2em 1em 2em 2em;">
+        {{ partial "sidebar-menu.html" . }}
+      </aside>
+      <!-- Центральная колонка: контент -->
+      <main style="flex:1;min-width:0;padding:2em;">
+        {{ block "main" . }}{{ end }}
+      </main>
+      <!-- Правая колонка: виджеты -->
+      <aside style="width:320px;min-width:220px;max-width:400px;padding:2em 2em 2em 1em;">
+        {{ partial "sidebar-widgets.html" . }}
+      </aside>
+    </div>
+  </body>
+</html> 

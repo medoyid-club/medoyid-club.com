@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Сітка контенту в стилі Дзен | Клуб Медоедів</title>
+<meta name="keywords" content="дизайн, ui, сітка">
+<meta name="description" content="Демонстрація адаптивної сітки контенту в стилі Яндекс Дзен">
+<meta name="author" content="Медоїди">
+<link rel="canonical" href="http://localhost:1313/news/grid-demo/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css" integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="uk" href="http://localhost:1313/news/grid-demo/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+    <link rel="stylesheet" href="/css/custom.css">
+  </head>
+  <body>
+    <div class="container" style="min-height:100vh;display:flex;flex-direction:row;">
+      
+      <aside style="width:260px;min-width:200px;max-width:300px;padding:2em 1em 2em 2em;">
+        <nav>
+  <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1em;">
+    <li><a class="menu active" href="/"><img src="/icons/home.svg" alt="Головна" style="width:20px;vertical-align:middle;margin-right:8px;">Головна</a></li>
+    <li><a class="menu" href="#novyny"><img src="/icons/news-off.svg" alt="Новини" style="width:20px;vertical-align:middle;margin-right:8px;">Новини</a></li>
+    <li><a class="menu" href="#library"><img src="/icons/books.svg" alt="Бібліотека" style="width:20px;vertical-align:middle;margin-right:8px;">Бібліотека</a></li>
+    <li><a class="menu" href="#recommend"><img src="/icons/adjustments-star.svg" alt="Рекомендації" style="width:20px;vertical-align:middle;margin-right:8px;">Рекомендації</a></li>
+    <li><a class="menu" href="#premium"><img src="/icons/crown.svg" alt="Преміум" style="width:20px;vertical-align:middle;margin-right:8px;">Преміум</a></li>
+    <li><a class="menu" href="#team"><img src="/icons/users-group.svg" alt="Команда" style="width:20px;vertical-align:middle;margin-right:8px;">Команда</a></li>
+    <li><a class="menu" href="#about"><img src="/icons/info-circle.svg" alt="Про проект" style="width:20px;vertical-align:middle;margin-right:8px;">Про проект</a></li>
+  </ul>
+  <div style="margin-top:2em;display:flex;gap:0.5em;">
+    <a href="#" class="button"><img src="/icons/brand-telegram.svg" alt="Telegram"></a>
+    <a href="#" class="button"><img src="/icons/brand-youtube.svg" alt="YouTube"></a>
+    <a href="#" class="button"><img src="/icons/brand-facebook.svg" alt="Facebook"></a>
+    <a href="#" class="button"><img src="/icons/brand-instagram.svg" alt="Instagram"></a>
+  </div>
+</nav>
+
+<style>
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 2px;
+  transition: all 0.2s ease-in;
+}
+.menu:hover, .menu.active {
+  background: rgb(61, 106, 255);
+  color: #fff;
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  text-decoration: none;
+}
+.menu img {
+  margin-right: 8px;
+}
+.button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  transition: 0.1s;
+}
+.button svg, .button img {
+  color: white;
+  width: 30px;
+  height: 30px;
+  z-index: 9;
+}
+.button:active {
+  transform: scale(0.85);
+}
+.button::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: #212121;
+  border-radius: 50px;
+  z-index: -1;
+  border: 0px solid rgba(255, 255, 255, 0.411);
+  transition: 0.4s;
+}
+.button:hover::before {
+  width: 0px;
+  height: 0px;
+}
+</style> 
+      </aside>
+      
+      <main style="flex:1;min-width:0;padding:2em;">
+        
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Сітка контенту в стилі Дзен
+    </h1>
+    <div class="post-description">
+      Демонстрація адаптивної сітки контенту в стилі Яндекс Дзен
+    </div>
+    <div class="post-meta"><span title='2025-01-05 16:00:00 +0200 +0200'>січня 5, 2025</span>&nbsp;·&nbsp;Медоїди
+
+</div>
+  </header> 
+  <div class="post-content"><!-- raw HTML omitted -->
+<h1 id="сітка-контенту-в-стилі-дзен">Сітка контенту в стилі Дзен<a hidden class="anchor" aria-hidden="true" href="#сітка-контенту-в-стилі-дзен">#</a></h1>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>Новий дизайн</strong> — Адаптивна сітка для відображення контенту різних типів та розмірів.</p>
+<h2 id="-адаптивна-сітка-3-колонки">🏗️ Адаптивна сітка (3 колонки)<a hidden class="anchor" aria-hidden="true" href="#-адаптивна-сітка-3-колонки">#</a></h2>
+
+
+
+
+
+
+<div class="custom-grid grid-cards" style="--grid-columns:3; --grid-gap:20px;">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+    <div class="grid-item-image">
+      <a href="/uk/news/energy-crisis-ukraine-2025/">
+      <img src="https://via.placeholder.com/400x225/667eea/ffffff?text=%d0%95%d0%bd%d0%b5%d1%80%d0%b3%d0%b5%d1%82%d0%b8%d0%ba%d0%b0" alt="Енергетична криза в Україні">
+      </a>
+    </div>
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Новини</div>
+    <h3 class="grid-item-title"><a href="/uk/news/energy-crisis-ukraine-2025/">Енергетична криза в Україні</a></h3>
+    <div class="grid-item-date">5 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    <div class="grid-item-excerpt">Аналіз поточної ситуації з енергопостачанням та прогнози на найближчі місяці.</div>
+    
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-large">
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Психологія</div>
+    <h3 class="grid-item-title"><a href="/uk/articles/psychology/understanding-modern-narratives/">Психологія сучасних наративів</a></h3>
+    <div class="grid-item-date">4 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    
+    
+Дослідження впливу інформаційних наративів на формування суспільної думки. Як розпізнати маніпуляції та зберегти критичне мислення в епоху інформаційного хаосу.
+
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+    <div class="grid-item-image">
+      <a href="/uk/shows/energy-geo/oil-market-trends-2025/">
+      <img src="https://via.placeholder.com/400x225/56ab2f/ffffff?text=%d0%9d%d0%b0%d1%84%d1%82%d0%b0" alt="Нафтовий ринок: тенденції 2025">
+      </a>
+    </div>
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Економіка</div>
+    <h3 class="grid-item-title"><a href="/uk/shows/energy-geo/oil-market-trends-2025/">Нафтовий ринок: тенденції 2025</a></h3>
+    <div class="grid-item-date">3 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    <div class="grid-item-excerpt">Огляд ключових факторів, що впливають на ціни нафти в новому році.</div>
+    
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-small">
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Новини</div>
+    <h3 class="grid-item-title">Швидкі новини</h3>
+    <div class="grid-item-date">5 січня 2025</div>
+    
+    
+    
+• Нова технологія накопичення енергії  
+• Зміни в енергетичній політиці ЄС  
+• Розвиток відновлюваних джерел  
+
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-wide">
+  
+    <div class="grid-item-image">
+      
+      <img src="https://via.placeholder.com/400x225/ff6b6b/ffffff?text=%d0%93%d0%b5%d0%be%d0%bf%d0%be%d0%bb%d1%96%d1%82%d0%b8%d0%ba%d0%b0" alt="Геополітичні зміни">
+      
+    </div>
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Аналітика</div>
+    <h3 class="grid-item-title">Геополітичні зміни</h3>
+    <div class="grid-item-date">4 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    <div class="grid-item-excerpt">Аналіз впливу геополітичних змін на енергетичну безпеку регіону.</div>
+    
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Технології</div>
+    <h3 class="grid-item-title">Технологічні інновації</h3>
+    <div class="grid-item-date">2 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    
+    
+Огляд найцікавіших технологічних рішень у сфері енергетики та їх потенційний вплив на майбутнє.
+
+  </div>
+</div> 
+
+
+</div> 
+<h2 id="-автоматична-сітка-як-в-дзені">🎯 Автоматична сітка (як в Дзені)<a hidden class="anchor" aria-hidden="true" href="#-автоматична-сітка-як-в-дзені">#</a></h2>
+
+
+
+
+
+
+<div class="custom-grid grid-modern" style="--grid-columns:auto; --grid-gap:25px;">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+    <div class="grid-item-image">
+      
+      <img src="https://via.placeholder.com/400x225/764ba2/ffffff?text=%d0%9d%d0%b5%d0%b7%d0%b0%d0%bb%d0%b5%d0%b6%d0%bd%d1%96%d1%81%d1%82%d1%8c" alt="Енергетична незалежність">
+      
+    </div>
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Стратегія</div>
+    <h3 class="grid-item-title">Енергетична незалежність</h3>
+    <div class="grid-item-date">5 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    <div class="grid-item-excerpt">Шляхи досягнення енергетичної незалежності України.</div>
+    
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Екологія</div>
+    <h3 class="grid-item-title">Відновлювана енергетика</h3>
+    <div class="grid-item-date">4 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    
+    
+Перспективи розвитку сонячної та вітрової енергетики в Україні. Аналіз потенціалу та перешкод.
+
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+    <div class="grid-item-image">
+      
+      <img src="https://via.placeholder.com/400x225/ff9a9e/ffffff?text=%d0%95%d1%84%d0%b5%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d1%96%d1%81%d1%82%d1%8c" alt="Енергоефективність">
+      
+    </div>
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Технології</div>
+    <h3 class="grid-item-title">Енергоефективність</h3>
+    <div class="grid-item-date">3 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    <div class="grid-item-excerpt">Сучасні методи підвищення енергоефективності в промисловості.</div>
+    
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-tall">
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Дипломатія</div>
+    <h3 class="grid-item-title">Міжнародна співпраця</h3>
+    <div class="grid-item-date">2 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    
+    
+Огляд ключових енергетичних партнерств України та їх вплив на національну безпеку.
+
+**Основні напрямки:**
+- Співпраця з ЄС
+- Партнерство з США
+- Регіональні ініціативи
+- Технологічний обмін
+
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+    <div class="grid-item-image">
+      
+      <img src="https://via.placeholder.com/400x225/2c3e50/ffffff?text=%d0%86%d0%bd%d0%bd%d0%be%d0%b2%d0%b0%d1%86%d1%96%d1%97" alt="Енергетичні інновації">
+      
+    </div>
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Наука</div>
+    <h3 class="grid-item-title">Енергетичні інновації</h3>
+    <div class="grid-item-date">1 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    <div class="grid-item-excerpt">Прорывні технології в енергетичному секторі.</div>
+    
+  </div>
+</div> 
+
+
+</div> 
+<h2 id="-мінімальна-сітка-2-колонки">📱 Мінімальна сітка (2 колонки)<a hidden class="anchor" aria-hidden="true" href="#-мінімальна-сітка-2-колонки">#</a></h2>
+
+
+
+
+
+
+<div class="custom-grid grid-minimal" style="--grid-columns:2; --grid-gap:30px;">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Безпека</div>
+    <h3 class="grid-item-title">Енергетична безпека</h3>
+    <div class="grid-item-date">5 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    
+    
+Комплексний підхід до забезпечення енергетичної безпеки держави в умовах глобальної нестабільності.
+
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Цифровізація</div>
+    <h3 class="grid-item-title">Цифровізація енергетики</h3>
+    <div class="grid-item-date">4 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    
+    
+Впровадження цифрових технологій в енергетичному секторі України. Smart Grid та IoT рішення.
+
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Право</div>
+    <h3 class="grid-item-title">Енергетичне право</h3>
+    <div class="grid-item-date">3 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    
+    
+Останні зміни в енергетичному законодавстві та їх вплив на ринок.
+
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Інвестиції</div>
+    <h3 class="grid-item-title">Інвестиції в енергетику</h3>
+    <div class="grid-item-date">2 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    
+    
+Аналіз інвестиційних можливостей в українському енергетичному секторі.
+
+  </div>
+</div> 
+
+
+</div> 
+<h2 id="-як-використовувати">🔧 Як використовувати<a hidden class="anchor" aria-hidden="true" href="#-як-використовувати">#</a></h2>
+<h3 id="базова-сітка">Базова сітка<a hidden class="anchor" aria-hidden="true" href="#базова-сітка">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">grid</span> <span style="color:#a6e22e">columns</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">gap</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cards&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span>  {{&lt; <span style="color:#f92672">grid-item</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Заголовок&#34;</span> <span style="color:#a6e22e">category</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Категорія&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span>  Контент тут
+</span></span><span style="display:flex;"><span>  {{&lt; /<span style="color:#f92672">grid-item</span> &gt;}}
+</span></span><span style="display:flex;"><span>{{&lt; /<span style="color:#f92672">grid</span> &gt;}}
+</span></span></code></pre></div><h3 id="елемент-з-зображенням">Елемент з зображенням<a hidden class="anchor" aria-hidden="true" href="#елемент-з-зображенням">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">grid-item</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Заголовок&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">image</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://example.com/image.jpg&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">category</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Категорія&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">date</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5 січня 2025&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">author</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Автор&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;large&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">excerpt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Короткий опис&#34;</span> &gt;}}
+</span></span></code></pre></div><h3 id="параметри-сітки">Параметри сітки<a hidden class="anchor" aria-hidden="true" href="#параметри-сітки">#</a></h3>
+<ul>
+<li><code>columns</code> - кількість колонок (1-6, auto)</li>
+<li><code>gap</code> - відстань між елементами (10, 15, 20, 25, 30, 40)</li>
+<li><code>style</code> - стиль сітки (cards, minimal, modern)</li>
+</ul>
+<h3 id="параметри-елементів">Параметри елементів<a hidden class="anchor" aria-hidden="true" href="#параметри-елементів">#</a></h3>
+<ul>
+<li><code>title</code> - заголовок</li>
+<li><code>image</code> - зображення</li>
+<li><code>category</code> - категорія</li>
+<li><code>date</code> - дата</li>
+<li><code>author</code> - автор</li>
+<li><code>url</code> - посилання</li>
+<li><code>excerpt</code> - короткий опис</li>
+<li><code>size</code> - розмір (normal, small, large, wide, tall)</li>
+</ul>
+<hr>
+<p><em>Сітка повністю адаптивна та підтримує всі пристрої</em></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD/">Дизайн</a></li>
+      <li><a href="http://localhost:1313/tags/ui/">Ui</a></li>
+      <li><a href="http://localhost:1313/tags/%D1%81%D1%96%D1%82%D0%BA%D0%B0/">Сітка</a></li>
+    </ul>
+  </footer>
+</article>
+      </main>
+      
+      <aside style="width:320px;min-width:220px;max-width:400px;padding:2em 2em 2em 1em;">
+        <div style="margin-bottom:2em;padding:1.5em;background:rgba(30,30,30,0.85);border-radius:16px;box-shadow:0 2px 12px 0 rgba(0,0,0,0.12);">
+  <h3 style="margin-top:0;">Інформація</h3>
+  <p>Ласкаво просимо до Клубу Медоедів! Тут ви знайдете новини, статті, відео та багато іншого.</p>
+</div>
+<div style="padding:1.5em;background:rgba(30,30,30,0.85);border-radius:16px;box-shadow:0 2px 12px 0 rgba(0,0,0,0.12);">
+  <h3 style="margin-top:0;">Категорії</h3>
+  <ul style="list-style:none;padding:0;margin:0;">
+    <li><img src="/icons/news.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Новини</li>
+    <li><img src="/icons/articles.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Статті</li>
+    <li><img src="/icons/video.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Відео</li>
+    <li><img src="/icons/other.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Інше</li>
+  </ul>
+</div> 
+      </aside>
+    </div>
+  </body>
+</html> 

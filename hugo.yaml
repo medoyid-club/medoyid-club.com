@@ -1,0 +1,16 @@
+baseURL: https://example.org/
+languageCode: uk
+
+title: Клуб Медоедів
+
+theme: ["PaperMod"]
+defaultContentLanguage: uk
+# languages:
+#   uk:
+#     languageName: "Українська"
+#     weight: 1
+
+params:
+  defaultTheme: dark
+  assets:
+    customCSS: ["css/custom.css"]

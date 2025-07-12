@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Клуб Медоедів</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on Клуб Медоедів</description>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>uk</language>
+    <lastBuildDate>Sun, 05 Jan 2025 16:00:00 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Новини</title>
+      <link>http://localhost:1313/categories/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/</link>
+      <pubDate>Sun, 05 Jan 2025 16:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/categories/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
