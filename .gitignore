@@ -1,0 +1,40 @@
+# Hugo build output
+public/
+
+# Hugo cache
+resources/_gen/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Node modules (if used)
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+temp/
+
+# Ignore user secrets and environment files
+.env
+.env.*
+
+# Ignore backup files
+*~
+*.bak
+
+# Ignore Hugo server files
+hugo_stats.json
+
+# Ignore custom scripts output (if any)
+*.webp
