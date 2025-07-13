@@ -1,0 +1,16 @@
+{{/*
+  partials/components/grid.html
+  Принимает:
+  - .context (контекст страницы, передается как ".")
+  - .columns
+  - .gap
+  - .style
+  - .inner (содержимое)
+*/}}
+{{ $columns := .columns | default "3" }}
+{{ $gap := .gap | default "20" }}
+{{ $style := .style | default "cards" }}
+
+<div class="custom-grid grid-{{ $style }}" style="--grid-columns:{{ $columns }}; --grid-gap:{{ $gap }}px;">
+  {{ .inner }}
+</div>

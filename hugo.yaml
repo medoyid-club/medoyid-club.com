@@ -1,7 +1,7 @@
 baseURL: https://example.org/
 languageCode: uk
 
-title: Клуб Медоедів
+title: "Клуб Медоїдів"
 
 theme: ["PaperMod"]
 defaultContentLanguage: uk
@@ -10,7 +10,149 @@ defaultContentLanguage: uk
 #     languageName: "Українська"
 #     weight: 1
 
+# --- Hugo Configuration ---
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allow raw HTML in markdown files
+
+# --- Hugo Configuration ---
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allow raw HTML in markdown files
+
+taxonomies:
+  category: categories
+  tag: tags
+  author: authors
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # Required for search
+
+menu:
+  # --- Головне горизонтальне меню ---
+  main:
+    - identifier: home
+      name: Головна
+      url: /
+      weight: 10
+    - identifier: news
+      name: Новини
+      url: /news/
+      weight: 20
+    - identifier: youtube
+      name: YouTube
+      url: /library/ # Поки що веде на бібліотеку, потім змінимо
+      weight: 30
+    - identifier: recommend
+      name: Рекомендації
+      url: /recommend/
+      weight: 40
+    - identifier: about
+      name: Про нас
+      url: /about/
+      weight: 50
+    - identifier: premium
+      name: Преміум
+      url: /premium/
+      weight: 60
+
+  # --- Вертикальне меню для розділу "Новини" ---
+  main_news:
+    - identifier: news_feed
+      name: Стрічка новин
+      url: /news/
+      weight: 10
+      params:
+        icon: "news"
+    - identifier: news_popular
+      name: Популярне
+      url: /news/popular/
+      weight: 20
+      params:
+        icon: "thumb-up"
+    - identifier: news_categories
+      name: Категорії
+      url: /categories/
+      weight: 30
+      params:
+        icon: "chart-infographic"
+
+  # --- Вертикальне меню для розділу "YouTube" ---
+  main_youtube:
+    - identifier: youtube_playlists
+      name: Плейлисти
+      url: /library/playlists/
+      weight: 10
+      params:
+        icon: "video"
+    - identifier: youtube_live
+      name: Трансляції
+      url: /library/live/
+      weight: 20
+      params:
+        icon: "photo-video"
+
+  # --- Вертикальне меню для розділу "Рекомендації" ---
+  main_recommendations:
+    - identifier: recommend_articles
+      name: Статті
+      url: /recommend/articles/
+      weight: 10
+      params:
+        icon: "article"
+    - identifier: recommend_books
+      name: Книги
+      url: /recommend/books/
+      weight: 20
+      params:
+        icon: "books"
+
+  # --- Вертикальне меню для розділу "Про нас" ---
+  main_about:
+    - identifier: about_manifesto
+      name: Маніфест
+      url: /about/
+      weight: 10
+      params:
+        icon: "file-info"
+    - identifier: about_admin
+      name: Адміністрація
+      url: /about/administration/
+      weight: 20
+      params:
+        icon: "users-group"
+    - identifier: about_speakers
+      name: Наші спікери
+      url: /about/speakers/
+      weight: 30
+      params:
+        icon: "user-star"
+    - identifier: about_guests
+      name: Наші гості
+      url: /about/guests/
+      weight: 40
+      params:
+        icon: "users"
+    - identifier: about_sponsors
+      name: Наші спонсори
+      url: /about/sponsors/
+      weight: 50
+      params:
+        icon: "diamond"
+    - identifier: about_contacts
+      name: Контакти
+      url: /about/contacts/
+      weight: 60
+      params:
+        icon: "address-book"
+
+
 params:
   defaultTheme: dark
-  assets:
-    customCSS: ["css/custom.css"]
+  ShowThemeToggle: true
+  enableSearch: true

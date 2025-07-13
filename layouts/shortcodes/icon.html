@@ -1,0 +1,5 @@
+{{- $iconName := .Get "name" -}}
+{{- $iconPath := printf "icons/%s.svg" $iconName -}}
+{{- if fileExists (printf "static/%s" $iconPath) -}}
+    {{- readFile (printf "static/%s" $iconPath) | safeHTML -}}
+{{- end -}}

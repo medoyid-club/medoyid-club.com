@@ -1,0 +1,30 @@
+{{- $member := . -}}
+<div class="member-card">
+  <div class="member-photo">
+    {{- if and $member.foto (fileExists (printf "static/img/members/%s" $member.foto)) -}}
+      <img src="{{ (printf "img/members/%s" $member.foto) | absURL }}" alt="{{ $member.name }}">
+    {{- else -}}
+      <img src="https://via.placeholder.com/250x250/333333/ffffff?text=No+Image" alt="Фото відсутнє">
+    {{- end -}}
+  </div>
+  <div class="member-info">
+    <div>
+      <h3 class="member-name">{{ $member.name }}</h3>
+      <p class="member-case">{{ $member.case }}</p>
+    </div>
+    <div class="member-footer">
+      <hr class="member-divider">
+      <div class="member-socials">
+        {{- if and $member.youtube (ne $member.youtube "-") -}}<a href="{{ $member.youtube }}" target="_blank" rel="noopener noreferrer" class="social-icon youtube" title="YouTube"><div class="filled"></div><img src="/icons/brand-youtube.svg" alt="YouTube"></a>{{- end -}}
+        {{- if and $member.telegram (ne $member.telegram "-") -}}<a href="{{ $member.telegram }}" target="_blank" rel="noopener noreferrer" class="social-icon telegram" title="Telegram"><div class="filled"></div><img src="/icons/brand-telegram.svg" alt="Telegram"></a>{{- end -}}
+        {{- if and $member.facebook (ne $member.facebook "-") -}}<a href="{{ $member.facebook }}" target="_blank" rel="noopener noreferrer" class="social-icon facebook" title="Facebook"><div class="filled"></div><img src="/icons/brand-facebook.svg" alt="Facebook"></a>{{- end -}}
+        {{- if and $member.patreon (ne $member.patreon "-") -}}<a href="{{ $member.patreon }}" target="_blank" rel="noopener noreferrer" class="social-icon patreon" title="Patreon"><div class="filled"></div><img src="/icons/brand-patreon.svg" alt="Patreon"></a>{{- end -}}
+        {{- if and $member.instagram (ne $member.instagram "-") -}}<a href="{{ $member.instagram }}" target="_blank" rel="noopener noreferrer" class="social-icon instagram" title="Instagram"><div class="filled"></div><img src="/icons/brand-instagram.svg" alt="Instagram"></a>{{- end -}}
+        {{- if and $member.tiktok (ne $member.tiktok "-") -}}<a href="{{ $member.tiktok }}" target="_blank" rel="noopener noreferrer" class="social-icon tiktok" title="TikTok"><div class="filled"></div><img src="/icons/brand-tiktok.svg" alt="TikTok"></a>{{- end -}}
+        {{- if and $member.web (ne $member.web "-") -}}<a href="{{ $member.web }}" target="_blank" rel="noopener noreferrer" class="social-icon web" title="Website"><div class="filled"></div><img src="/icons/world-www.svg" alt="Website"></a>{{- end -}}
+        {{- if and $member.email (ne $member.email "-") -}}<a href="mailto:{{ $member.email }}" class="social-icon email" title="Email"><div class="filled"></div><img src="/icons/mail.svg" alt="Email"></a>{{- end -}}
+        {{- if and $member.linkedin (ne $member.linkedin "-") -}}<a href="{{ $member.linkedin }}" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" title="LinkedIn"><div class="filled"></div><img src="/icons/brand-linkedin.svg" alt="LinkedIn"></a>{{- end -}}
+      </div>
+    </div>
+  </div>
+</div>

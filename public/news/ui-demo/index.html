@@ -1,0 +1,3671 @@
+<!DOCTYPE html>
+<html lang="uk" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Демонстрація UI компонентів | Клуб Медоїдів</title>
+<meta name="keywords" content="ui, дизайн, компоненти">
+<meta name="description" content="Демонстрація кастомних UI компонентів сайту">
+<meta name="author" content="Медоїди">
+<link rel="canonical" href="http://localhost:1313/news/ui-demo/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9290e41777b911b53e6dc761814059917b028407d03163cdc7a4de21ce834c26.css" integrity="sha256-kpDkF3e5EbU&#43;bcdhgUBZkXsChAfQMWPNx6TeIc6DTCY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="uk" href="http://localhost:1313/news/ui-demo/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class=" dark" id="top" data-page-url="/news/ui-demo/">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <div class="header-top">
+        <div class="logo-container">
+            <a href="http://localhost:1313/" accesskey="h" title="Клуб Медоїдів (Alt + H)">
+                <img src="/img/logo.svg" alt="logo" class="custom-logo custom-logo-svg" />
+                <span>Клуб Медоїдів</span>
+            </a>
+        </div>
+
+        <div class="header-actions">
+            <a href="http://localhost:1313/search" class="action-icon" aria-label="search" title="Search (Alt + /)" accesskey="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </a>
+            <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme" class="action-icon">
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <nav class="nav header-nav">
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Головна">
+                    <span>Головна</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/news/" title="Новини">
+                    <span>Новини</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/library/" title="YouTube">
+                    <span>YouTube</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/recommend/" title="Рекомендації">
+                    <span>Рекомендації</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="Про нас">
+                    <span>Про нас</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/premium/" title="Преміум">
+                    <span>Преміум</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main custom-layout"><aside class="left-column">
+                <nav class="sidebar-menu">
+    <ul><li>
+            <a href="http://localhost:1313/news/"><span class="menu-icon"><!--
+category: Document
+tags: [newspaper, article]
+version: "1.0"
+unicode: "eafd"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
+  <path d="M8 8l4 0" />
+  <path d="M8 12l4 0" />
+  <path d="M8 16l4 0" />
+</svg>
+</span><span class="menu-text">Стрічка новин</span>
+            </a>
+        </li><li>
+            <a href="http://localhost:1313/news/popular/"><span class="menu-icon"></span><span class="menu-text">Популярне</span>
+            </a>
+        </li><li>
+            <a href="http://localhost:1313/categories/"><span class="menu-icon"><!--
+tags: [statistics, data, value, variable, scale, statistical, bar, information, report]
+category: Charts
+version: "1.39"
+unicode: "ee30"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+  <path d="M7 3v4h4" />
+  <path d="M9 17l0 4" />
+  <path d="M17 14l0 7" />
+  <path d="M13 13l0 8" />
+  <path d="M21 12l0 9" />
+</svg>
+</span><span class="menu-text">Категорії</span>
+            </a>
+        </li></ul>
+</nav>
+            </aside>
+            <div class="center-column">
+                
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Демонстрація UI компонентів
+    </h1>
+    <div class="post-description">
+      Демонстрація кастомних UI компонентів сайту
+    </div>
+    <div class="post-meta"><span title='2025-07-12 10:00:00 +0200 +0200'>липня 12, 2025</span>&nbsp;·&nbsp;Медоїди
+
+</div>
+  </header> 
+  <div class="post-content"><div class="animated-header">
+<h1 id="демонстрація-ui-компонентів">Демонстрація UI компонентів<a hidden class="anchor" aria-hidden="true" href="#демонстрація-ui-компонентів">#</a></h1>
+</div>
+<p><span class="pulse-indicator"></span><strong>Новий функціонал</strong> — На цій сторінці ви можете побачити всі доступні кастомні UI компоненти.</p>
+<h2 id="-карточки-cards">📊 Карточки (Cards)<a hidden class="anchor" aria-hidden="true" href="#-карточки-cards">#</a></h2>
+<div class="custom-card card-blue">
+  <div class="card-header">
+    <span class="card-icon">💡</span>
+    <h3 class="card-title">🎯 Інформаційна карточка</h3>
+  </div>
+  <div class="card-content">
+    Це базова карточка з інформацією. Вона підтримує markdown форматування та має <strong>красиві анімації</strong>.
+  </div>
+</div>
+
+<style>
+.custom-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.custom-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  pointer-events: none;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.card-content {
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+ 
+.card-blue { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.card-green { background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%); }
+.card-red { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%); }
+.card-purple { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.card-orange { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+.card-dark { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); }
+</style> 
+<div class="custom-card card-green">
+  <div class="card-header">
+    <span class="card-icon">💡</span>
+    <h3 class="card-title">✅ Карточка успіху</h3>
+  </div>
+  <div class="card-content">
+    Використовуйте зелену карточку для позитивної інформації, успіхів та досягнень.
+  </div>
+</div>
+
+<style>
+.custom-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.custom-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  pointer-events: none;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.card-content {
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+ 
+.card-blue { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.card-green { background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%); }
+.card-red { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%); }
+.card-purple { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.card-orange { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+.card-dark { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); }
+</style> 
+<div class="custom-card card-red">
+  <div class="card-header">
+    <span class="card-icon">💡</span>
+    <h3 class="card-title">⚠️ Попередження</h3>
+  </div>
+  <div class="card-content">
+    Червона карточка привертає увагу до важливої інформації або попереджень.
+  </div>
+</div>
+
+<style>
+.custom-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.custom-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  pointer-events: none;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.card-content {
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+ 
+.card-blue { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.card-green { background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%); }
+.card-red { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%); }
+.card-purple { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.card-orange { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+.card-dark { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); }
+</style> 
+<div class="custom-card card-purple">
+  <div class="card-header">
+    <span class="card-icon">💡</span>
+    <h3 class="card-title">🔮 Креативна карточка</h3>
+  </div>
+  <div class="card-content">
+    Фіолетова карточка ідеально підходить для творчих проектів та ідей.
+  </div>
+</div>
+
+<style>
+.custom-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.custom-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  pointer-events: none;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.card-content {
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+ 
+.card-blue { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.card-green { background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%); }
+.card-red { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%); }
+.card-purple { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.card-orange { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+.card-dark { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); }
+</style> 
+<h2 id="-кнопки-buttons">🔘 Кнопки (Buttons)<a hidden class="anchor" aria-hidden="true" href="#-кнопки-buttons">#</a></h2>
+<p><a href="#" class="custom-button btn-default">Базова кнопка
+</a>
+
+<style>
+.btn-default { background: linear-gradient(45deg, #667eea, #764ba2); }
+.btn-success { background: linear-gradient(45deg, #56ab2f, #a8e6cf); }
+.btn-danger { background: linear-gradient(45deg, #ff6b6b, #ee5a52); }
+.btn-warning { background: linear-gradient(45deg, #ff9a9e, #fecfef); }
+.btn-dark { background: linear-gradient(45deg, #2c3e50, #34495e); }
+
+.btn-icon {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+</style> 
+<a href="#" class="custom-button btn-success"><span class="btn-icon">✅</span>Успіх
+</a>
+
+<style>
+.btn-default { background: linear-gradient(45deg, #667eea, #764ba2); }
+.btn-success { background: linear-gradient(45deg, #56ab2f, #a8e6cf); }
+.btn-danger { background: linear-gradient(45deg, #ff6b6b, #ee5a52); }
+.btn-warning { background: linear-gradient(45deg, #ff9a9e, #fecfef); }
+.btn-dark { background: linear-gradient(45deg, #2c3e50, #34495e); }
+
+.btn-icon {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+</style> 
+<a href="#" class="custom-button btn-warning"><span class="btn-icon">⚠️</span>Попередження
+</a>
+
+<style>
+.btn-default { background: linear-gradient(45deg, #667eea, #764ba2); }
+.btn-success { background: linear-gradient(45deg, #56ab2f, #a8e6cf); }
+.btn-danger { background: linear-gradient(45deg, #ff6b6b, #ee5a52); }
+.btn-warning { background: linear-gradient(45deg, #ff9a9e, #fecfef); }
+.btn-dark { background: linear-gradient(45deg, #2c3e50, #34495e); }
+
+.btn-icon {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+</style> 
+<a href="#" class="custom-button btn-danger"><span class="btn-icon">❌</span>Небезпека
+</a>
+
+<style>
+.btn-default { background: linear-gradient(45deg, #667eea, #764ba2); }
+.btn-success { background: linear-gradient(45deg, #56ab2f, #a8e6cf); }
+.btn-danger { background: linear-gradient(45deg, #ff6b6b, #ee5a52); }
+.btn-warning { background: linear-gradient(45deg, #ff9a9e, #fecfef); }
+.btn-dark { background: linear-gradient(45deg, #2c3e50, #34495e); }
+
+.btn-icon {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+</style> 
+<a href="#" class="custom-button btn-dark"><span class="btn-icon">🌙</span>Темна тема
+</a>
+
+<style>
+.btn-default { background: linear-gradient(45deg, #667eea, #764ba2); }
+.btn-success { background: linear-gradient(45deg, #56ab2f, #a8e6cf); }
+.btn-danger { background: linear-gradient(45deg, #ff6b6b, #ee5a52); }
+.btn-warning { background: linear-gradient(45deg, #ff9a9e, #fecfef); }
+.btn-dark { background: linear-gradient(45deg, #2c3e50, #34495e); }
+
+.btn-icon {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+</style> </p>
+<h3 id="кнопки-з-анімацією-завантаження">Кнопки з анімацією завантаження<a hidden class="anchor" aria-hidden="true" href="#кнопки-з-анімацією-завантаження">#</a></h3>
+<p><button class="loading-button loading-primary loading-medium" id="loading-btn-1752380796" onclick="startLoading('loading-btn-1752380796')">
+  <span class="button-text">Завантажити файл</span>
+  <span class="loading-text" style="display: none;">Завантаження...</span>
+  <span class="loading-spinner" style="display: none;">
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+  </span>
+</button>
+
+<script>
+function startLoading(buttonId) {
+  const button = document.getElementById(buttonId);
+  const buttonText = button.querySelector('.button-text');
+  const loadingText = button.querySelector('.loading-text');
+  const spinner = button.querySelector('.loading-spinner');
+  
+  
+  buttonText.style.display = 'none';
+  loadingText.style.display = 'inline';
+  spinner.style.display = 'inline-flex';
+  button.disabled = true;
+  button.classList.add('loading-active');
+  
+  
+  setTimeout(() => {
+    buttonText.style.display = 'inline';
+    loadingText.style.display = 'none';
+    spinner.style.display = 'none';
+    button.disabled = false;
+    button.classList.remove('loading-active');
+  }, 3000);
+}
+</script>
+
+<style>
+.loading-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.loading-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.loading-button:hover::before {
+  left: 100%;
+}
+
+.loading-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.loading-button:disabled::before {
+  display: none;
+}
+
+ 
+.loading-small {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  min-height: 32px;
+}
+
+.loading-medium {
+  padding: 12px 24px;
+  font-size: 1rem;
+  min-height: 40px;
+}
+
+.loading-large {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  min-height: 48px;
+}
+
+ 
+.loading-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+}
+
+.loading-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.loading-success {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+  color: white;
+}
+
+.loading-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.4);
+}
+
+.loading-danger {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+}
+
+.loading-danger:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.loading-warning {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+  color: white;
+}
+
+.loading-warning:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 154, 158, 0.4);
+}
+
+.loading-dark {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  color: white;
+}
+
+.loading-dark:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+ 
+.loading-spinner {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.spinner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+
+.spinner-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.spinner-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.spinner-dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+ 
+.loading-active {
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+}
+
+ 
+.loading-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .loading-button {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .loading-button:hover:not(:disabled) {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+</style> 
+<button class="loading-button loading-success loading-small" id="loading-btn-1752380796" onclick="startLoading('loading-btn-1752380796')">
+  <span class="button-text">Зберегти</span>
+  <span class="loading-text" style="display: none;">Збереження...</span>
+  <span class="loading-spinner" style="display: none;">
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+  </span>
+</button>
+
+<script>
+function startLoading(buttonId) {
+  const button = document.getElementById(buttonId);
+  const buttonText = button.querySelector('.button-text');
+  const loadingText = button.querySelector('.loading-text');
+  const spinner = button.querySelector('.loading-spinner');
+  
+  
+  buttonText.style.display = 'none';
+  loadingText.style.display = 'inline';
+  spinner.style.display = 'inline-flex';
+  button.disabled = true;
+  button.classList.add('loading-active');
+  
+  
+  setTimeout(() => {
+    buttonText.style.display = 'inline';
+    loadingText.style.display = 'none';
+    spinner.style.display = 'none';
+    button.disabled = false;
+    button.classList.remove('loading-active');
+  }, 3000);
+}
+</script>
+
+<style>
+.loading-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.loading-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.loading-button:hover::before {
+  left: 100%;
+}
+
+.loading-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.loading-button:disabled::before {
+  display: none;
+}
+
+ 
+.loading-small {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  min-height: 32px;
+}
+
+.loading-medium {
+  padding: 12px 24px;
+  font-size: 1rem;
+  min-height: 40px;
+}
+
+.loading-large {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  min-height: 48px;
+}
+
+ 
+.loading-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+}
+
+.loading-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.loading-success {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+  color: white;
+}
+
+.loading-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.4);
+}
+
+.loading-danger {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+}
+
+.loading-danger:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.loading-warning {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+  color: white;
+}
+
+.loading-warning:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 154, 158, 0.4);
+}
+
+.loading-dark {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  color: white;
+}
+
+.loading-dark:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+ 
+.loading-spinner {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.spinner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+
+.spinner-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.spinner-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.spinner-dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+ 
+.loading-active {
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+}
+
+ 
+.loading-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .loading-button {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .loading-button:hover:not(:disabled) {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+</style> 
+<button class="loading-button loading-danger loading-large" id="loading-btn-1752380796" onclick="startLoading('loading-btn-1752380796')">
+  <span class="button-text">Видалити</span>
+  <span class="loading-text" style="display: none;">Видалення...</span>
+  <span class="loading-spinner" style="display: none;">
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+  </span>
+</button>
+
+<script>
+function startLoading(buttonId) {
+  const button = document.getElementById(buttonId);
+  const buttonText = button.querySelector('.button-text');
+  const loadingText = button.querySelector('.loading-text');
+  const spinner = button.querySelector('.loading-spinner');
+  
+  
+  buttonText.style.display = 'none';
+  loadingText.style.display = 'inline';
+  spinner.style.display = 'inline-flex';
+  button.disabled = true;
+  button.classList.add('loading-active');
+  
+  
+  setTimeout(() => {
+    buttonText.style.display = 'inline';
+    loadingText.style.display = 'none';
+    spinner.style.display = 'none';
+    button.disabled = false;
+    button.classList.remove('loading-active');
+  }, 3000);
+}
+</script>
+
+<style>
+.loading-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.loading-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.loading-button:hover::before {
+  left: 100%;
+}
+
+.loading-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.loading-button:disabled::before {
+  display: none;
+}
+
+ 
+.loading-small {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  min-height: 32px;
+}
+
+.loading-medium {
+  padding: 12px 24px;
+  font-size: 1rem;
+  min-height: 40px;
+}
+
+.loading-large {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  min-height: 48px;
+}
+
+ 
+.loading-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+}
+
+.loading-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.loading-success {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+  color: white;
+}
+
+.loading-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.4);
+}
+
+.loading-danger {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+}
+
+.loading-danger:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.loading-warning {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+  color: white;
+}
+
+.loading-warning:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 154, 158, 0.4);
+}
+
+.loading-dark {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  color: white;
+}
+
+.loading-dark:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+ 
+.loading-spinner {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.spinner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+
+.spinner-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.spinner-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.spinner-dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+ 
+.loading-active {
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+}
+
+ 
+.loading-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .loading-button {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .loading-button:hover:not(:disabled) {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+</style> 
+<button class="loading-button loading-warning loading-medium" id="loading-btn-1752380796" onclick="startLoading('loading-btn-1752380796')">
+  <span class="button-text">Оновити</span>
+  <span class="loading-text" style="display: none;">Оновлення...</span>
+  <span class="loading-spinner" style="display: none;">
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+  </span>
+</button>
+
+<script>
+function startLoading(buttonId) {
+  const button = document.getElementById(buttonId);
+  const buttonText = button.querySelector('.button-text');
+  const loadingText = button.querySelector('.loading-text');
+  const spinner = button.querySelector('.loading-spinner');
+  
+  
+  buttonText.style.display = 'none';
+  loadingText.style.display = 'inline';
+  spinner.style.display = 'inline-flex';
+  button.disabled = true;
+  button.classList.add('loading-active');
+  
+  
+  setTimeout(() => {
+    buttonText.style.display = 'inline';
+    loadingText.style.display = 'none';
+    spinner.style.display = 'none';
+    button.disabled = false;
+    button.classList.remove('loading-active');
+  }, 3000);
+}
+</script>
+
+<style>
+.loading-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.loading-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.loading-button:hover::before {
+  left: 100%;
+}
+
+.loading-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.loading-button:disabled::before {
+  display: none;
+}
+
+ 
+.loading-small {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  min-height: 32px;
+}
+
+.loading-medium {
+  padding: 12px 24px;
+  font-size: 1rem;
+  min-height: 40px;
+}
+
+.loading-large {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  min-height: 48px;
+}
+
+ 
+.loading-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+}
+
+.loading-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.loading-success {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+  color: white;
+}
+
+.loading-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.4);
+}
+
+.loading-danger {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+}
+
+.loading-danger:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.loading-warning {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+  color: white;
+}
+
+.loading-warning:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 154, 158, 0.4);
+}
+
+.loading-dark {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  color: white;
+}
+
+.loading-dark:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+ 
+.loading-spinner {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.spinner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+
+.spinner-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.spinner-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.spinner-dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+ 
+.loading-active {
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+}
+
+ 
+.loading-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .loading-button {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .loading-button:hover:not(:disabled) {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+</style> 
+<button class="loading-button loading-dark loading-small" id="loading-btn-1752380796" onclick="startLoading('loading-btn-1752380796')">
+  <span class="button-text">Експорт</span>
+  <span class="loading-text" style="display: none;">Експорт...</span>
+  <span class="loading-spinner" style="display: none;">
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+  </span>
+</button>
+
+<script>
+function startLoading(buttonId) {
+  const button = document.getElementById(buttonId);
+  const buttonText = button.querySelector('.button-text');
+  const loadingText = button.querySelector('.loading-text');
+  const spinner = button.querySelector('.loading-spinner');
+  
+  
+  buttonText.style.display = 'none';
+  loadingText.style.display = 'inline';
+  spinner.style.display = 'inline-flex';
+  button.disabled = true;
+  button.classList.add('loading-active');
+  
+  
+  setTimeout(() => {
+    buttonText.style.display = 'inline';
+    loadingText.style.display = 'none';
+    spinner.style.display = 'none';
+    button.disabled = false;
+    button.classList.remove('loading-active');
+  }, 3000);
+}
+</script>
+
+<style>
+.loading-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.loading-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.loading-button:hover::before {
+  left: 100%;
+}
+
+.loading-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.loading-button:disabled::before {
+  display: none;
+}
+
+ 
+.loading-small {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  min-height: 32px;
+}
+
+.loading-medium {
+  padding: 12px 24px;
+  font-size: 1rem;
+  min-height: 40px;
+}
+
+.loading-large {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  min-height: 48px;
+}
+
+ 
+.loading-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+}
+
+.loading-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.loading-success {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+  color: white;
+}
+
+.loading-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.4);
+}
+
+.loading-danger {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+}
+
+.loading-danger:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.loading-warning {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+  color: white;
+}
+
+.loading-warning:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 154, 158, 0.4);
+}
+
+.loading-dark {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  color: white;
+}
+
+.loading-dark:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+ 
+.loading-spinner {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.spinner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+
+.spinner-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.spinner-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.spinner-dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+ 
+.loading-active {
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+}
+
+ 
+.loading-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .loading-button {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .loading-button:hover:not(:disabled) {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+</style> </p>
+<h2 id="-прогрес-бари-progress-bars">📈 Прогрес-бари (Progress Bars)<a hidden class="anchor" aria-hidden="true" href="#-прогрес-бари-progress-bars">#</a></h2>
+<p><div class="progress-container">
+  <div class="progress-label">Розробка функціоналу</div>
+  <div class="progress-bar">
+    <div class="progress-fill progress-blue progress-30"></div>
+  </div>
+  <div class="progress-text">30%</div>
+</div>
+
+<style>
+.progress-container {
+  margin: 20px 0;
+}
+
+.progress-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 2s ease-out;
+}
+
+.progress-blue { background: linear-gradient(90deg, #667eea, #764ba2); }
+.progress-green { background: linear-gradient(90deg, #56ab2f, #a8e6cf); }
+.progress-red { background: linear-gradient(90deg, #ff6b6b, #ee5a52); }
+.progress-orange { background: linear-gradient(90deg, #ff9a9e, #fecfef); }
+
+.progress-text {
+  text-align: right;
+  font-size: 0.9em;
+  margin-top: 4px;
+  color: var(--secondary);
+}
+
+ 
+.progress-10 { width: 10%; }
+.progress-20 { width: 20%; }
+.progress-30 { width: 30%; }
+.progress-40 { width: 40%; }
+.progress-50 { width: 50%; }
+.progress-60 { width: 60%; }
+.progress-70 { width: 70%; }
+.progress-80 { width: 80%; }
+.progress-90 { width: 90%; }
+.progress-100 { width: 100%; }
+</style> 
+<div class="progress-container">
+  <div class="progress-label">Дизайн сайту</div>
+  <div class="progress-bar">
+    <div class="progress-fill progress-green progress-75"></div>
+  </div>
+  <div class="progress-text">75%</div>
+</div>
+
+<style>
+.progress-container {
+  margin: 20px 0;
+}
+
+.progress-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 2s ease-out;
+}
+
+.progress-blue { background: linear-gradient(90deg, #667eea, #764ba2); }
+.progress-green { background: linear-gradient(90deg, #56ab2f, #a8e6cf); }
+.progress-red { background: linear-gradient(90deg, #ff6b6b, #ee5a52); }
+.progress-orange { background: linear-gradient(90deg, #ff9a9e, #fecfef); }
+
+.progress-text {
+  text-align: right;
+  font-size: 0.9em;
+  margin-top: 4px;
+  color: var(--secondary);
+}
+
+ 
+.progress-10 { width: 10%; }
+.progress-20 { width: 20%; }
+.progress-30 { width: 30%; }
+.progress-40 { width: 40%; }
+.progress-50 { width: 50%; }
+.progress-60 { width: 60%; }
+.progress-70 { width: 70%; }
+.progress-80 { width: 80%; }
+.progress-90 { width: 90%; }
+.progress-100 { width: 100%; }
+</style> 
+<div class="progress-container">
+  <div class="progress-label">Контент</div>
+  <div class="progress-bar">
+    <div class="progress-fill progress-orange progress-90"></div>
+  </div>
+  <div class="progress-text">90%</div>
+</div>
+
+<style>
+.progress-container {
+  margin: 20px 0;
+}
+
+.progress-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 2s ease-out;
+}
+
+.progress-blue { background: linear-gradient(90deg, #667eea, #764ba2); }
+.progress-green { background: linear-gradient(90deg, #56ab2f, #a8e6cf); }
+.progress-red { background: linear-gradient(90deg, #ff6b6b, #ee5a52); }
+.progress-orange { background: linear-gradient(90deg, #ff9a9e, #fecfef); }
+
+.progress-text {
+  text-align: right;
+  font-size: 0.9em;
+  margin-top: 4px;
+  color: var(--secondary);
+}
+
+ 
+.progress-10 { width: 10%; }
+.progress-20 { width: 20%; }
+.progress-30 { width: 30%; }
+.progress-40 { width: 40%; }
+.progress-50 { width: 50%; }
+.progress-60 { width: 60%; }
+.progress-70 { width: 70%; }
+.progress-80 { width: 80%; }
+.progress-90 { width: 90%; }
+.progress-100 { width: 100%; }
+</style> 
+<div class="progress-container">
+  <div class="progress-label">Тестування</div>
+  <div class="progress-bar">
+    <div class="progress-fill progress-red progress-50"></div>
+  </div>
+  <div class="progress-text">50%</div>
+</div>
+
+<style>
+.progress-container {
+  margin: 20px 0;
+}
+
+.progress-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 2s ease-out;
+}
+
+.progress-blue { background: linear-gradient(90deg, #667eea, #764ba2); }
+.progress-green { background: linear-gradient(90deg, #56ab2f, #a8e6cf); }
+.progress-red { background: linear-gradient(90deg, #ff6b6b, #ee5a52); }
+.progress-orange { background: linear-gradient(90deg, #ff9a9e, #fecfef); }
+
+.progress-text {
+  text-align: right;
+  font-size: 0.9em;
+  margin-top: 4px;
+  color: var(--secondary);
+}
+
+ 
+.progress-10 { width: 10%; }
+.progress-20 { width: 20%; }
+.progress-30 { width: 30%; }
+.progress-40 { width: 40%; }
+.progress-50 { width: 50%; }
+.progress-60 { width: 60%; }
+.progress-70 { width: 70%; }
+.progress-80 { width: 80%; }
+.progress-90 { width: 90%; }
+.progress-100 { width: 100%; }
+</style> </p>
+<h2 id="-переключатели-toggle-switches">🔄 Переключатели (Toggle Switches)<a hidden class="anchor" aria-hidden="true" href="#-переключатели-toggle-switches">#</a></h2>
+<p><div class="toggle-wrapper"><label class="toggle-label">Темна тема</label><label class="toggle-switch toggle-blue toggle-medium">
+    <input type="checkbox" id="toggle-1752380796" aria-label="Темна тема">
+    <span class="toggle-slider">
+      <span class="toggle-button"></span>
+    </span>
+  </label>
+</div>
+
+<style>
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: var(--primary);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-slider {
+  position: relative;
+  display: block;
+  background: #e2e8f0;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f1f5f9, #e2e8f0);
+  transition: all 0.3s ease;
+}
+
+ 
+.toggle-small .toggle-slider {
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-small .toggle-button {
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-medium .toggle-slider {
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-medium .toggle-button {
+  width: 22px;
+  height: 22px;
+}
+
+.toggle-large .toggle-slider {
+  width: 64px;
+  height: 32px;
+}
+
+.toggle-large .toggle-button {
+  width: 28px;
+  height: 28px;
+}
+
+ 
+.toggle-switch input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  box-shadow: 
+    inset 0 2px 4px rgba(102, 126, 234, 0.3),
+    0 1px 2px rgba(102, 126, 234, 0.2);
+}
+
+.toggle-switch input:checked + .toggle-slider .toggle-button::before {
+  background: linear-gradient(45deg, #ffffff, #f8fafc);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+ 
+.toggle-small input:checked + .toggle-slider .toggle-button {
+  transform: translateX(20px);
+}
+
+.toggle-medium input:checked + .toggle-slider .toggle-button {
+  transform: translateX(24px);
+}
+
+.toggle-large input:checked + .toggle-slider .toggle-button {
+  transform: translateX(32px);
+}
+
+ 
+.toggle-blue input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.toggle-green input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+}
+
+.toggle-red input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+}
+
+.toggle-purple input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.toggle-orange input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.toggle-dark input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+ 
+.toggle-switch:hover .toggle-slider {
+  transform: scale(1.05);
+}
+
+.toggle-switch:hover .toggle-button {
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ 
+.toggle-switch input:focus + .toggle-slider {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+ 
+.toggle-switch:active .toggle-slider {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .toggle-slider {
+  background: #374151;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .toggle-button {
+  background: #f9fafb;
+}
+
+[data-theme="dark"] .toggle-label {
+  color: var(--primary);
+}
+</style> 
+<div class="toggle-wrapper"><label class="toggle-label">Сповіщення</label><label class="toggle-switch toggle-green toggle-small">
+    <input type="checkbox" id="toggle-1752380796" aria-label="Сповіщення" checked>
+    <span class="toggle-slider">
+      <span class="toggle-button"></span>
+    </span>
+  </label>
+</div>
+
+<style>
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: var(--primary);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-slider {
+  position: relative;
+  display: block;
+  background: #e2e8f0;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f1f5f9, #e2e8f0);
+  transition: all 0.3s ease;
+}
+
+ 
+.toggle-small .toggle-slider {
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-small .toggle-button {
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-medium .toggle-slider {
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-medium .toggle-button {
+  width: 22px;
+  height: 22px;
+}
+
+.toggle-large .toggle-slider {
+  width: 64px;
+  height: 32px;
+}
+
+.toggle-large .toggle-button {
+  width: 28px;
+  height: 28px;
+}
+
+ 
+.toggle-switch input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  box-shadow: 
+    inset 0 2px 4px rgba(102, 126, 234, 0.3),
+    0 1px 2px rgba(102, 126, 234, 0.2);
+}
+
+.toggle-switch input:checked + .toggle-slider .toggle-button::before {
+  background: linear-gradient(45deg, #ffffff, #f8fafc);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+ 
+.toggle-small input:checked + .toggle-slider .toggle-button {
+  transform: translateX(20px);
+}
+
+.toggle-medium input:checked + .toggle-slider .toggle-button {
+  transform: translateX(24px);
+}
+
+.toggle-large input:checked + .toggle-slider .toggle-button {
+  transform: translateX(32px);
+}
+
+ 
+.toggle-blue input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.toggle-green input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+}
+
+.toggle-red input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+}
+
+.toggle-purple input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.toggle-orange input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.toggle-dark input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+ 
+.toggle-switch:hover .toggle-slider {
+  transform: scale(1.05);
+}
+
+.toggle-switch:hover .toggle-button {
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ 
+.toggle-switch input:focus + .toggle-slider {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+ 
+.toggle-switch:active .toggle-slider {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .toggle-slider {
+  background: #374151;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .toggle-button {
+  background: #f9fafb;
+}
+
+[data-theme="dark"] .toggle-label {
+  color: var(--primary);
+}
+</style> 
+<div class="toggle-wrapper"><label class="toggle-label">Автозбереження</label><label class="toggle-switch toggle-purple toggle-large">
+    <input type="checkbox" id="toggle-1752380796" aria-label="Автозбереження">
+    <span class="toggle-slider">
+      <span class="toggle-button"></span>
+    </span>
+  </label>
+</div>
+
+<style>
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: var(--primary);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-slider {
+  position: relative;
+  display: block;
+  background: #e2e8f0;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f1f5f9, #e2e8f0);
+  transition: all 0.3s ease;
+}
+
+ 
+.toggle-small .toggle-slider {
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-small .toggle-button {
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-medium .toggle-slider {
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-medium .toggle-button {
+  width: 22px;
+  height: 22px;
+}
+
+.toggle-large .toggle-slider {
+  width: 64px;
+  height: 32px;
+}
+
+.toggle-large .toggle-button {
+  width: 28px;
+  height: 28px;
+}
+
+ 
+.toggle-switch input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  box-shadow: 
+    inset 0 2px 4px rgba(102, 126, 234, 0.3),
+    0 1px 2px rgba(102, 126, 234, 0.2);
+}
+
+.toggle-switch input:checked + .toggle-slider .toggle-button::before {
+  background: linear-gradient(45deg, #ffffff, #f8fafc);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+ 
+.toggle-small input:checked + .toggle-slider .toggle-button {
+  transform: translateX(20px);
+}
+
+.toggle-medium input:checked + .toggle-slider .toggle-button {
+  transform: translateX(24px);
+}
+
+.toggle-large input:checked + .toggle-slider .toggle-button {
+  transform: translateX(32px);
+}
+
+ 
+.toggle-blue input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.toggle-green input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+}
+
+.toggle-red input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+}
+
+.toggle-purple input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.toggle-orange input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.toggle-dark input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+ 
+.toggle-switch:hover .toggle-slider {
+  transform: scale(1.05);
+}
+
+.toggle-switch:hover .toggle-button {
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ 
+.toggle-switch input:focus + .toggle-slider {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+ 
+.toggle-switch:active .toggle-slider {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .toggle-slider {
+  background: #374151;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .toggle-button {
+  background: #f9fafb;
+}
+
+[data-theme="dark"] .toggle-label {
+  color: var(--primary);
+}
+</style> 
+<div class="toggle-wrapper"><label class="toggle-label">Режим розробника</label><label class="toggle-switch toggle-red toggle-medium">
+    <input type="checkbox" id="toggle-1752380796" aria-label="Режим розробника">
+    <span class="toggle-slider">
+      <span class="toggle-button"></span>
+    </span>
+  </label>
+</div>
+
+<style>
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: var(--primary);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-slider {
+  position: relative;
+  display: block;
+  background: #e2e8f0;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f1f5f9, #e2e8f0);
+  transition: all 0.3s ease;
+}
+
+ 
+.toggle-small .toggle-slider {
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-small .toggle-button {
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-medium .toggle-slider {
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-medium .toggle-button {
+  width: 22px;
+  height: 22px;
+}
+
+.toggle-large .toggle-slider {
+  width: 64px;
+  height: 32px;
+}
+
+.toggle-large .toggle-button {
+  width: 28px;
+  height: 28px;
+}
+
+ 
+.toggle-switch input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  box-shadow: 
+    inset 0 2px 4px rgba(102, 126, 234, 0.3),
+    0 1px 2px rgba(102, 126, 234, 0.2);
+}
+
+.toggle-switch input:checked + .toggle-slider .toggle-button::before {
+  background: linear-gradient(45deg, #ffffff, #f8fafc);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+ 
+.toggle-small input:checked + .toggle-slider .toggle-button {
+  transform: translateX(20px);
+}
+
+.toggle-medium input:checked + .toggle-slider .toggle-button {
+  transform: translateX(24px);
+}
+
+.toggle-large input:checked + .toggle-slider .toggle-button {
+  transform: translateX(32px);
+}
+
+ 
+.toggle-blue input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.toggle-green input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+}
+
+.toggle-red input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+}
+
+.toggle-purple input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.toggle-orange input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.toggle-dark input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+ 
+.toggle-switch:hover .toggle-slider {
+  transform: scale(1.05);
+}
+
+.toggle-switch:hover .toggle-button {
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ 
+.toggle-switch input:focus + .toggle-slider {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+ 
+.toggle-switch:active .toggle-slider {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .toggle-slider {
+  background: #374151;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .toggle-button {
+  background: #f9fafb;
+}
+
+[data-theme="dark"] .toggle-label {
+  color: var(--primary);
+}
+</style> 
+<div class="toggle-wrapper"><label class="toggle-label">Синхронізація</label><label class="toggle-switch toggle-orange toggle-small">
+    <input type="checkbox" id="toggle-1752380796" aria-label="Синхронізація" checked>
+    <span class="toggle-slider">
+      <span class="toggle-button"></span>
+    </span>
+  </label>
+</div>
+
+<style>
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: var(--primary);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-slider {
+  position: relative;
+  display: block;
+  background: #e2e8f0;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f1f5f9, #e2e8f0);
+  transition: all 0.3s ease;
+}
+
+ 
+.toggle-small .toggle-slider {
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-small .toggle-button {
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-medium .toggle-slider {
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-medium .toggle-button {
+  width: 22px;
+  height: 22px;
+}
+
+.toggle-large .toggle-slider {
+  width: 64px;
+  height: 32px;
+}
+
+.toggle-large .toggle-button {
+  width: 28px;
+  height: 28px;
+}
+
+ 
+.toggle-switch input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  box-shadow: 
+    inset 0 2px 4px rgba(102, 126, 234, 0.3),
+    0 1px 2px rgba(102, 126, 234, 0.2);
+}
+
+.toggle-switch input:checked + .toggle-slider .toggle-button::before {
+  background: linear-gradient(45deg, #ffffff, #f8fafc);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+ 
+.toggle-small input:checked + .toggle-slider .toggle-button {
+  transform: translateX(20px);
+}
+
+.toggle-medium input:checked + .toggle-slider .toggle-button {
+  transform: translateX(24px);
+}
+
+.toggle-large input:checked + .toggle-slider .toggle-button {
+  transform: translateX(32px);
+}
+
+ 
+.toggle-blue input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.toggle-green input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+}
+
+.toggle-red input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+}
+
+.toggle-purple input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.toggle-orange input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.toggle-dark input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+ 
+.toggle-switch:hover .toggle-slider {
+  transform: scale(1.05);
+}
+
+.toggle-switch:hover .toggle-button {
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ 
+.toggle-switch input:focus + .toggle-slider {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+ 
+.toggle-switch:active .toggle-slider {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .toggle-slider {
+  background: #374151;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .toggle-button {
+  background: #f9fafb;
+}
+
+[data-theme="dark"] .toggle-label {
+  color: var(--primary);
+}
+</style> 
+<div class="toggle-wrapper"><label class="toggle-label">Toggle</label><label class="toggle-switch toggle-dark toggle-medium">
+    <input type="checkbox" id="toggle-1752380796" aria-label="Toggle">
+    <span class="toggle-slider">
+      <span class="toggle-button"></span>
+    </span>
+  </label>
+</div>
+
+<style>
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: var(--primary);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-slider {
+  position: relative;
+  display: block;
+  background: #e2e8f0;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f1f5f9, #e2e8f0);
+  transition: all 0.3s ease;
+}
+
+ 
+.toggle-small .toggle-slider {
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-small .toggle-button {
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-medium .toggle-slider {
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-medium .toggle-button {
+  width: 22px;
+  height: 22px;
+}
+
+.toggle-large .toggle-slider {
+  width: 64px;
+  height: 32px;
+}
+
+.toggle-large .toggle-button {
+  width: 28px;
+  height: 28px;
+}
+
+ 
+.toggle-switch input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  box-shadow: 
+    inset 0 2px 4px rgba(102, 126, 234, 0.3),
+    0 1px 2px rgba(102, 126, 234, 0.2);
+}
+
+.toggle-switch input:checked + .toggle-slider .toggle-button::before {
+  background: linear-gradient(45deg, #ffffff, #f8fafc);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+ 
+.toggle-small input:checked + .toggle-slider .toggle-button {
+  transform: translateX(20px);
+}
+
+.toggle-medium input:checked + .toggle-slider .toggle-button {
+  transform: translateX(24px);
+}
+
+.toggle-large input:checked + .toggle-slider .toggle-button {
+  transform: translateX(32px);
+}
+
+ 
+.toggle-blue input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.toggle-green input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+}
+
+.toggle-red input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+}
+
+.toggle-purple input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.toggle-orange input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.toggle-dark input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+ 
+.toggle-switch:hover .toggle-slider {
+  transform: scale(1.05);
+}
+
+.toggle-switch:hover .toggle-button {
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ 
+.toggle-switch input:focus + .toggle-slider {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+ 
+.toggle-switch:active .toggle-slider {
+  transform: scale(0.95);
+}
+
+ 
+[data-theme="dark"] .toggle-slider {
+  background: #374151;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .toggle-button {
+  background: #f9fafb;
+}
+
+[data-theme="dark"] .toggle-label {
+  color: var(--primary);
+}
+</style> </p>
+<h2 id="-адаптивні-сітки-grid-system">🏗️ Адаптивні сітки (Grid System)<a hidden class="anchor" aria-hidden="true" href="#-адаптивні-сітки-grid-system">#</a></h2>
+<h3 id="сітка-карточок-3-колонки">Сітка карточок (3 колонки)<a hidden class="anchor" aria-hidden="true" href="#сітка-карточок-3-колонки">#</a></h3>
+
+
+
+
+
+
+<div class="custom-grid grid-cards" style="--grid-columns:3; --grid-gap:20px;">
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+    <div class="grid-item-image">
+      
+      <img src="https://via.placeholder.com/400x225/667eea/ffffff?text=Tech" alt="Новини технологій">
+      
+    </div>
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Технології</div>
+    <h3 class="grid-item-title">Новини технологій</h3>
+    <div class="grid-item-date">5 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    <div class="grid-item-excerpt">Останні новини зі світу технологій та інновацій.</div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-large">
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">Дизайн</div>
+    <h3 class="grid-item-title">Дизайн майбутнього</h3>
+    <div class="grid-item-date">4 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    
+    Як буде виглядати дизайн веб-сайтів у 2025 році? Тренди, які змінять індустрію.
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid-item grid-item-normal">
+  
+    <div class="grid-item-image">
+      
+      <img src="https://via.placeholder.com/400x225/56ab2f/ffffff?text=UX" alt="UI/UX тренди">
+      
+    </div>
+  
+  <div class="grid-item-content">
+    <div class="grid-item-category">UX</div>
+    <h3 class="grid-item-title">UI/UX тренди</h3>
+    <div class="grid-item-date">3 січня 2025</div>
+    <div class="grid-item-author">Медоїди</div>
+    <div class="grid-item-excerpt">Головні тренди в дизайні користувацьких інтерфейсів.</div>
+    
+  </div>
+</div>
+
+
+
+</div> 
+<h2 id="-сповіщення-alerts">🚨 Сповіщення (Alerts)<a hidden class="anchor" aria-hidden="true" href="#-сповіщення-alerts">#</a></h2>
+<div class="custom-alert alert-info">
+  <div class="alert-icon">ℹ️</div>
+  <div class="alert-content"><div class="alert-title">Інформація</div><div class="alert-text">Це інформаційне сповіщення з важливою інформацією для користувачів.</div>
+  </div>
+</div>
+
+<style>
+.custom-alert {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border-left: 4px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-alert::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.05));
+  border-left-color: #667eea;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, rgba(86, 171, 47, 0.1), rgba(168, 230, 207, 0.05));
+  border-left-color: #56ab2f;
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, rgba(255, 154, 158, 0.1), rgba(254, 207, 239, 0.05));
+  border-left-color: #ff9a9e;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(238, 90, 82, 0.05));
+  border-left-color: #ff6b6b;
+}
+
+.alert-icon {
+  font-size: 1.5em;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.alert-text {
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.alert-text p {
+  margin: 0;
+}
+</style> 
+<div class="custom-alert alert-success">
+  <div class="alert-icon">✅</div>
+  <div class="alert-content"><div class="alert-title">Успіх!</div><div class="alert-text">Операція виконана успішно! Всі дані збережено.</div>
+  </div>
+</div>
+
+<style>
+.custom-alert {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border-left: 4px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-alert::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.05));
+  border-left-color: #667eea;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, rgba(86, 171, 47, 0.1), rgba(168, 230, 207, 0.05));
+  border-left-color: #56ab2f;
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, rgba(255, 154, 158, 0.1), rgba(254, 207, 239, 0.05));
+  border-left-color: #ff9a9e;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(238, 90, 82, 0.05));
+  border-left-color: #ff6b6b;
+}
+
+.alert-icon {
+  font-size: 1.5em;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.alert-text {
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.alert-text p {
+  margin: 0;
+}
+</style> 
+<div class="custom-alert alert-warning">
+  <div class="alert-icon">⚠️</div>
+  <div class="alert-content"><div class="alert-title">Увага!</div><div class="alert-text">Будь ласка, перевірте введені дані перед продовженням.</div>
+  </div>
+</div>
+
+<style>
+.custom-alert {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border-left: 4px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-alert::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.05));
+  border-left-color: #667eea;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, rgba(86, 171, 47, 0.1), rgba(168, 230, 207, 0.05));
+  border-left-color: #56ab2f;
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, rgba(255, 154, 158, 0.1), rgba(254, 207, 239, 0.05));
+  border-left-color: #ff9a9e;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(238, 90, 82, 0.05));
+  border-left-color: #ff6b6b;
+}
+
+.alert-icon {
+  font-size: 1.5em;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.alert-text {
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.alert-text p {
+  margin: 0;
+}
+</style> 
+<div class="custom-alert alert-danger">
+  <div class="alert-icon">❌</div>
+  <div class="alert-content"><div class="alert-title">Помилка!</div><div class="alert-text">Сталася помилка. Спробуйте ще раз або зверніться до підтримки.</div>
+  </div>
+</div>
+
+<style>
+.custom-alert {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border-left: 4px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-alert::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.05));
+  border-left-color: #667eea;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, rgba(86, 171, 47, 0.1), rgba(168, 230, 207, 0.05));
+  border-left-color: #56ab2f;
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, rgba(255, 154, 158, 0.1), rgba(254, 207, 239, 0.05));
+  border-left-color: #ff9a9e;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(238, 90, 82, 0.05));
+  border-left-color: #ff6b6b;
+}
+
+.alert-icon {
+  font-size: 1.5em;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.alert-text {
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.alert-text p {
+  margin: 0;
+}
+</style> 
+<h2 id="-додаткові-стилі">🎨 Додаткові стилі<a hidden class="anchor" aria-hidden="true" href="#-додаткові-стилі">#</a></h2>
+<h3 id="анімований-заголовок">Анімований заголовок<a hidden class="anchor" aria-hidden="true" href="#анімований-заголовок">#</a></h3>
+<div class="animated-header">
+<h3>Цей заголовок має анімований градієнт</h3>
+</div>
+<h3 id="кастомна-цитата">Кастомна цитата<a hidden class="anchor" aria-hidden="true" href="#кастомна-цитата">#</a></h3>
+<div class="custom-quote">
+Красиві UI компоненти роблять сайт більш привабливим та зручним для користувачів. Вони покращують кори��тувацький досвід та створюють позитивне враження.
+</div>
+<h3 id="анімовані-теги">Анімовані теги<a hidden class="anchor" aria-hidden="true" href="#анімовані-теги">#</a></h3>
+<div>
+<a href="#" class="animated-tag">Дизайн</a>
+<a href="#" class="animated-tag">UI/UX</a>
+<a href="#" class="animated-tag">Веб-розробка</a>
+<a href="#" class="animated-tag">Hugo</a>
+<a href="#" class="animated-tag">CSS</a>
+</div>
+<h2 id="-як-використовувати">🔧 Як використовувати<a hidden class="anchor" aria-hidden="true" href="#-як-використовувати">#</a></h2>
+<h3 id="карточки">Карточки<a hidden class="anchor" aria-hidden="true" href="#карточки">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">card</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Заголовок&#34;</span> <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Ваш контент тут&#34;</span> &gt;}}
+</span></span></code></pre></div><h3 id="кнопки">Кнопки<a hidden class="anchor" aria-hidden="true" href="#кнопки">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">button</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Текст кнопки&#34;</span> <span style="color:#a6e22e">url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://example.com&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;success&#34;</span> <span style="color:#a6e22e">icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;✅&#34;</span> &gt;}}
+</span></span></code></pre></div><h3 id="кнопки-завантаження">Кнопки завантаження<a hidden class="anchor" aria-hidden="true" href="#кнопки-завантаження">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">loading-button</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Завантажити&#34;</span> <span style="color:#a6e22e">loading_text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Завантаження...&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;primary&#34;</span> <span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;medium&#34;</span> &gt;}}
+</span></span></code></pre></div><h3 id="прогрес-бари">Прогрес-бари<a hidden class="anchor" aria-hidden="true" href="#прогрес-бари">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">progress</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;75&#34;</span> <span style="color:#a6e22e">label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Назва прогресу&#34;</span> <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> &gt;}}
+</span></span></code></pre></div><h3 id="переключатели">Переключатели<a hidden class="anchor" aria-hidden="true" href="#переключатели">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">toggle</span> <span style="color:#a6e22e">label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Назва&#34;</span> <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span> <span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;medium&#34;</span> <span style="color:#a6e22e">checked</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> &gt;}}
+</span></span></code></pre></div><h3 id="адаптивні-сітки">Адаптивні сітки<a hidden class="anchor" aria-hidden="true" href="#адаптивні-сітки">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">grid</span> <span style="color:#a6e22e">columns</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">gap</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cards&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span>  {{&lt; <span style="color:#f92672">grid-item</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Заголовок&#34;</span> <span style="color:#a6e22e">image</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image.jpg&#34;</span> <span style="color:#a6e22e">category</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Категорія&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span>  Контент тут
+</span></span><span style="display:flex;"><span>  {{&lt; /<span style="color:#f92672">grid-item</span> &gt;}}
+</span></span><span style="display:flex;"><span>{{&lt; /<span style="color:#f92672">grid</span> &gt;}}
+</span></span></code></pre></div><h3 id="сповіщення">Сповіщення<a hidden class="anchor" aria-hidden="true" href="#сповіщення">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">alert</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;info&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Заголовок&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span>Ваш контент тут
+</span></span><span style="display:flex;"><span>{{&lt; /<span style="color:#f92672">alert</span> &gt;}}
+</span></span></code></pre></div><h2 id="-параметри">📚 Параметри<a hidden class="anchor" aria-hidden="true" href="#-параметри">#</a></h2>
+<h3 id="карточки-1">Карточки<a hidden class="anchor" aria-hidden="true" href="#карточки-1">#</a></h3>
+<ul>
+<li><code>title</code> - заголовок карточки</li>
+<li><code>color</code> - колір (blue, green, red, purple, orange, dark)</li>
+<li><code>content</code> - вміст карточки (підтримує markdown)</li>
+</ul>
+<h3 id="кнопки-1">Кнопки<a hidden class="anchor" aria-hidden="true" href="#кнопки-1">#</a></h3>
+<ul>
+<li><code>text</code> - текст кнопки</li>
+<li><code>url</code> - посилання</li>
+<li><code>style</code> - стиль (default, success, danger, warning, dark)</li>
+<li><code>icon</code> - іконка (емодзі)</li>
+</ul>
+<h3 id="кнопки-завантаження-1">Кнопки завантаження<a hidden class="anchor" aria-hidden="true" href="#кнопки-завантаження-1">#</a></h3>
+<ul>
+<li><code>text</code> - текст кнопки</li>
+<li><code>loading_text</code> - текст під час завантаження</li>
+<li><code>style</code> - стиль (primary, success, danger, warning, dark)</li>
+<li><code>size</code> - розмір (small, medium, large)</li>
+<li><code>id</code> - унікальний ідентифікатор</li>
+</ul>
+<h3 id="прогрес-бари-1">Прогрес-бари<a hidden class="anchor" aria-hidden="true" href="#прогрес-бари-1">#</a></h3>
+<ul>
+<li><code>value</code> - значення прогресу (10, 20, 30, &hellip;, 100)</li>
+<li><code>label</code> - назва прогресу</li>
+<li><code>color</code> - колір (blue, green, red, orange)</li>
+</ul>
+<h3 id="переключатели-1">Переключатели<a hidden class="anchor" aria-hidden="true" href="#переключатели-1">#</a></h3>
+<ul>
+<li><code>label</code> - підпис переключателя</li>
+<li><code>color</code> - колір (blue, green, red, purple, orange, dark)</li>
+<li><code>size</code> - розмір (small, medium, large)</li>
+<li><code>checked</code> - початковий стан (true/false)</li>
+<li><code>id</code> - унікальний ідентифікатор</li>
+</ul>
+<h3 id="адаптивні-сітки-1">Адаптивні сітки<a hidden class="anchor" aria-hidden="true" href="#адаптивні-сітки-1">#</a></h3>
+<p><strong>Параметри сітки:</strong></p>
+<ul>
+<li><code>columns</code> - кількість колонок (1-6, auto)</li>
+<li><code>gap</code> - відстань між елементами (10, 15, 20, 25, 30, 40)</li>
+<li><code>style</code> - стиль сітки (cards, minimal, modern)</li>
+</ul>
+<p><strong>Параметри елементів:</strong></p>
+<ul>
+<li><code>title</code> - заголовок</li>
+<li><code>image</code> - зображення</li>
+<li><code>category</code> - категорія</li>
+<li><code>date</code> - дата</li>
+<li><code>author</code> - автор</li>
+<li><code>url</code> - посилання</li>
+<li><code>excerpt</code> - короткий опис</li>
+<li><code>size</code> - розмір (normal, small, large, wide, tall)</li>
+</ul>
+<h3 id="сповіщення-1">Сповіщення<a hidden class="anchor" aria-hidden="true" href="#сповіщення-1">#</a></h3>
+<ul>
+<li><code>type</code> - тип (info, success, warning, danger)</li>
+<li><code>title</code> - заголовок сповіщення</li>
+</ul>
+<hr>
+<p><em>Всі компоненти адаптовані для світлої та темної тем</em></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/ui/">Ui</a></li>
+      <li><a href="http://localhost:1313/tags/%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD/">Дизайн</a></li>
+      <li><a href="http://localhost:1313/tags/%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%B8/">Компоненти</a></li>
+    </ul>
+  </footer>
+</article>
+            </div>
+            <aside class="right-column">
+                
+
+
+
+
+<div class="custom-grid grid-cards" style="--grid-columns:1; --grid-gap:30px;">
+  
+
+<div class="grid-item grid-item-normal">
+  <div class="grid-item-content">
+    <div class="grid-item-category">Клуб Медоїдів</div>
+    <h3 class="grid-item-title">Вітаємо!</h3>
+    
+    <div class="grid-item-inner-content">
+      <p>Тут медоїди єднаються думками, як модернізувати Україну та зробити українську державу та суспільство лідерами світу.</p><p><strong>Медоїд медоїду брат, свій до свого по своє.</strong></p>
+    </div><div class="member-footer" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border-color);">
+      <div class="member-socials"><a href="https://www.youtube.com/@honey_erbe" target="_blank" rel="noopener noreferrer" class="social-icon youtube" title="YouTube"><div class="filled"></div><img src="/icons/brand-youtube.svg" alt="YouTube"></a><a href="https://t.me/honeybadgerland" target="_blank" rel="noopener noreferrer" class="social-icon telegram" title="Telegram"><div class="filled"></div><img src="/icons/brand-telegram.svg" alt="Telegram"></a><a href="https://www.patreon.com/c/honey_erbe" target="_blank" rel="noopener noreferrer" class="social-icon patreon" title="Patreon"><div class="filled"></div><img src="/icons/brand-patreon.svg" alt="Patreon"></a><a href="mailto:medoid.club@gmail.com" class="social-icon email" title="Email"><div class="filled"></div><img src="/icons/mail.svg" alt="Email"></a></div>
+    </div></div>
+</div>
+
+
+<div class="grid-item grid-item-normal">
+  <div class="grid-item-content">
+    <div class="grid-item-category">Навігація</div>
+    <h3 class="grid-item-title">Категорії</h3>
+    
+    <div class="grid-item-inner-content">
+      
+      <ul class="widget-category-list">
+        <li><a href="http://localhost:1313/news/"><img src="/icons/news.svg" alt="">Новини</a></li>
+        <li><a href="http://localhost:1313/library/"><img src="/icons/articles.svg" alt="">Статті</a></li>
+        <li><a href="http://localhost:1313/library/"><img src="/icons/video.svg" alt="">Відео</a></li>
+        <li><a href="http://localhost:1313/library/"><img src="/icons/other.svg" alt="">Інше</a></li>
+      </ul>
+    
+    </div></div>
+</div>
+
+</div>
+<style>
+.widget-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.widget-category-list li {
+  margin-bottom: 10px;
+}
+.widget-category-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.widget-category-list img {
+  width: 20px;
+  height: 20px;
+}
+</style>
+
+            </aside></main>
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Клуб Медоїдів</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script></body>
+
+</html>

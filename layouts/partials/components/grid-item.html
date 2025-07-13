@@ -1,0 +1,41 @@
+{{/*
+  partials/components/grid-item.html
+  Принимает:
+  - .context
+  - .title
+  - .image
+  - .category
+  - .date
+  - .author
+  - .url
+  - .excerpt
+  - .size
+  - .inner
+*/}}
+
+{{ $title := .title }}
+{{ $image := .image }}
+{{ $category := .category }}
+{{ $date := .date }}
+{{ $author := .author }}
+{{ $url := .url }}
+{{ $excerpt := .excerpt }}
+{{ $size := .size | default "normal" }}
+
+<div class="grid-item grid-item-{{ $size }}">
+  {{ if $image }}
+    <div class="grid-item-image">
+      {{ if $url }}<a href="{{ $url }}">{{ end }}
+      <img src="{{ $image }}" alt="{{ $title }}">
+      {{ if $url }}</a>{{ end }}
+    </div>
+  {{ end }}
+  <div class="grid-item-content">
+    {{ if $category }}<div class="grid-item-category">{{ $category }}</div>{{ end }}
+    {{ if $title }}<h3 class="grid-item-title">{{ if $url }}<a href="{{ $url }}">{{ $title }}</a>{{ else }}{{ $title }}{{ end }}</h3>{{ end }}
+    {{ if $date }}<div class="grid-item-date">{{ $date }}</div>{{ end }}
+    {{ if $author }}<div class="grid-item-author">{{ $author }}</div>{{ end }}
+    {{ if $excerpt }}<div class="grid-item-excerpt">{{ $excerpt }}</div>{{ end }}
+    {{ .Inner }}
+  </div>
+</div>

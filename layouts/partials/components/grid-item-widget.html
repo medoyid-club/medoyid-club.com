@@ -1,0 +1,26 @@
+{{/*
+  partials/components/grid-item-widget.html
+  A special version of grid-item that supports a footer with social links.
+*/}}
+
+<div class="grid-item grid-item-normal">
+  <div class="grid-item-content">
+    {{ if .category }}<div class="grid-item-category">{{ .category }}</div>{{ end }}
+    {{ if .title }}<h3 class="grid-item-title">{{ .title }}</h3>{{ end }}
+    
+    <div class="grid-item-inner-content">
+      {{ .inner | safeHTML }}
+    </div>
+
+    {{- if .socials -}}
+    <div class="member-footer" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border-color);">
+      <div class="member-socials">
+        {{- if .socials.youtube -}}<a href="{{ .socials.youtube }}" target="_blank" rel="noopener noreferrer" class="social-icon youtube" title="YouTube"><div class="filled"></div><img src="/icons/brand-youtube.svg" alt="YouTube"></a>{{- end -}}
+        {{- if .socials.telegram -}}<a href="{{ .socials.telegram }}" target="_blank" rel="noopener noreferrer" class="social-icon telegram" title="Telegram"><div class="filled"></div><img src="/icons/brand-telegram.svg" alt="Telegram"></a>{{- end -}}
+        {{- if .socials.patreon -}}<a href="{{ .socials.patreon }}" target="_blank" rel="noopener noreferrer" class="social-icon patreon" title="Patreon"><div class="filled"></div><img src="/icons/brand-patreon.svg" alt="Patreon"></a>{{- end -}}
+        {{- if .socials.email -}}<a href="{{ .socials.email }}" class="social-icon email" title="Email"><div class="filled"></div><img src="/icons/mail.svg" alt="Email"></a>{{- end -}}
+      </div>
+    </div>
+    {{- end -}}
+  </div>
+</div>

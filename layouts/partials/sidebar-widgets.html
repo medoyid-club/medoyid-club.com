@@ -1,13 +1,63 @@
-<div style="margin-bottom:2em;padding:1.5em;background:rgba(30,30,30,0.85);border-radius:16px;box-shadow:0 2px 12px 0 rgba(0,0,0,0.12);">
-  <h3 style="margin-top:0;">Інформація</h3>
-  <p>Ласкаво просимо до Клубу Медоедів! Тут ви знайдете новини, статті, відео та багато іншого.</p>
-</div>
-<div style="padding:1.5em;background:rgba(30,30,30,0.85);border-radius:16px;box-shadow:0 2px 12px 0 rgba(0,0,0,0.12);">
-  <h3 style="margin-top:0;">Категорії</h3>
-  <ul style="list-style:none;padding:0;margin:0;">
-    <li><img src="/icons/news.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Новини</li>
-    <li><img src="/icons/articles.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Статті</li>
-    <li><img src="/icons/video.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Відео</li>
-    <li><img src="/icons/other.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Інше</li>
-  </ul>
-</div> 
+{{- $social_links := dict
+  "youtube" "https://www.youtube.com/@honey_erbe"
+  "telegram" "https://t.me/honeybadgerland"
+  "patreon" "https://www.patreon.com/c/honey_erbe"
+  "email" "mailto:medoid.club@gmail.com"
+-}}
+
+{{- $widget_items := slice
+  (dict
+    "title" "Вітаємо!"
+    "category" "Клуб Медоїдів"
+    "inner" (printf "<p>Тут медоїди єднаються думками, як модернізувати Україну та зробити українську державу та суспільство лідерами світу.</p><p><strong>Медоїд медоїду брат, свій до свого по своє.</strong></p>")
+    "socials" $social_links
+  )
+  (dict
+    "title" "Категорії"
+    "category" "Навігація"
+    "inner" (printf `
+      <ul class="widget-category-list">
+        <li><a href="%s"><img src="/icons/news.svg" alt="" class="widget-icon">Новини</a></li>
+        <li><a href="%s"><img src="/icons/articles.svg" alt="" class="widget-icon">Статті</a></li>
+        <li><a href="%s"><img src="/icons/video.svg" alt="" class="widget-icon">Відео</a></li>
+        <li><a href="%s"><img src="/icons/other.svg" alt="" class="widget-icon">Інше</a></li>
+      </ul>
+    ` ("/news/" | absURL) ("/library/" | absURL) ("/library/" | absURL) ("/library/" | absURL))
+  )
+-}}
+
+{{- $grid_inner := slice -}}
+{{- range $widget_items -}}
+  {{- $item_html := partial "components/grid-item-widget.html" . -}}
+  {{- $grid_inner = $grid_inner | append $item_html -}}
+{{- end -}}
+
+{{- partial "components/grid.html" (dict
+  "context" .
+  "columns" "1"
+  "gap" "30"
+  "style" "cards"
+  "inner" (delimit $grid_inner "" | safeHTML)
+) -}}
+
+<style>
+.widget-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.widget-category-list li {
+  margin-bottom: 10px;
+}
+.widget-category-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.widget-category-list img {
+  width: 20px;
+  height: 20px;
+}
+</style>

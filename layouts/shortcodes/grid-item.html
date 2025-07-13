@@ -1,8 +1,6 @@
 {{/*
-  grid-item.html — карточка для сетки
-  Параметры: title, image, category, date, author, url, excerpt, size
+  grid-item.html — v1.2 — Correctly renders inner content as markdown/html
 */}}
-
 {{ $title := .Get "title" }}
 {{ $image := .Get "image" }}
 {{ $category := .Get "category" }}
@@ -26,6 +24,6 @@
     {{ if $date }}<div class="grid-item-date">{{ $date }}</div>{{ end }}
     {{ if $author }}<div class="grid-item-author">{{ $author }}</div>{{ end }}
     {{ if $excerpt }}<div class="grid-item-excerpt">{{ $excerpt }}</div>{{ end }}
-    {{ .Inner }}
+    {{ .Inner | .Page.RenderString }}
   </div>
-</div> 
+</div>

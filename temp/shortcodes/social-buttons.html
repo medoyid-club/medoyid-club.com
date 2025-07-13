@@ -1,0 +1,312 @@
+{{/* Social Buttons Shortcode - v1.0 */}}
+{{- $platforms := split (.Get "platforms" | default "facebook,telegram,youtube,twitter,instagram") "," -}}
+{{- $size := .Get "size" | default "medium" -}}
+{{- $columns := .Get "columns" | default "auto" -}}
+
+{{- $sizeClasses := dict "small" "social-btn-small" "medium" "social-btn-medium" "large" "social-btn-large" -}}
+{{- $sizeClass := index $sizeClasses $size -}}
+
+{{- $gridColumns := "auto-fit" -}}
+{{- if ne $columns "auto" -}}
+  {{- $gridColumns = printf "repeat(%s, 1fr)" $columns -}}
+{{- end -}}
+
+<div class="social-buttons-flat" style="--grid-columns: {{ $gridColumns }};">
+  {{- range $index, $platform := $platforms -}}
+    {{- $platform := $platform | strings.TrimSpace | lower -}}
+    {{- $platformData := dict 
+      "facebook" (dict "name" "Facebook" "icon" "fab fa-facebook-f" "url" "https://facebook.com" "color" "#1877f2" "customLogo" "")
+      "telegram" (dict "name" "Telegram" "icon" "fab fa-telegram-plane" "url" "https://t.me" "color" "#0088cc" "customLogo" "/images/social/telegram.svg")
+      "youtube" (dict "name" "YouTube" "icon" "fab fa-youtube" "url" "https://youtube.com" "color" "#ff0000" "customLogo" "/images/social/Youtube.svg")
+      "twitter" (dict "name" "Twitter" "icon" "fab fa-twitter" "url" "https://twitter.com" "color" "#1da1f2" "customLogo" "")
+      "instagram" (dict "name" "Instagram" "icon" "fab fa-instagram" "url" "https://instagram.com" "color" "#e4405f" "customLogo" "")
+      "linkedin" (dict "name" "LinkedIn" "icon" "fab fa-linkedin-in" "url" "https://linkedin.com" "color" "#0077b5" "customLogo" "")
+      "tiktok" (dict "name" "TikTok" "icon" "fab fa-tiktok" "url" "https://tiktok.com" "color" "#000000" "customLogo" "")
+      "discord" (dict "name" "Discord" "icon" "fab fa-discord" "url" "https://discord.com" "color" "#5865f2" "customLogo" "")
+      "spotify" (dict "name" "Spotify" "icon" "fab fa-spotify" "url" "https://spotify.com" "color" "#1db954" "customLogo" "")
+      "whatsapp" (dict "name" "WhatsApp" "icon" "fab fa-whatsapp" "url" "https://whatsapp.com" "color" "#25d366" "customLogo" "")
+      "patreon" (dict "name" "Patreon" "icon" "fab fa-patreon" "url" "https://patreon.com" "color" "#ff424d" "customLogo" "/images/social/patreon.svg")
+    -}}
+    {{- $data := index $platformData $platform -}}
+    {{- if $data -}}
+      <a href="{{ $data.url }}" 
+         class="social-btn-flat {{ $sizeClass }}"
+         data-platform="{{ $platform }}"
+         style="--platform-color: {{ $data.color }};"
+         title="{{ $data.name }}"
+         aria-label="{{ $data.name }}"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content">
+          {{- if $data.customLogo -}}
+            <img src="{{ $data.customLogo }}" alt="{{ $data.name }}" class="custom-logo">
+          {{- else -}}
+            <i class="{{ $data.icon }}"></i>
+          {{- end -}}
+          <span class="btn-text">{{ $data.name }}</span>
+        </div>
+      </a>
+    {{- end -}}
+  {{- end -}}
+</div>
+
+<style>
+.social-buttons-flat {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(auto-fit, minmax(80px, 1fr)));
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+.social-btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  
+  /* Четкие границы без размытий */
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  text-shadow: none !important;
+  
+  /* Простой плоский дизайн */
+  background: #1a1a1a;
+  border: 1px solid #666;
+  
+  /* Убираем все эффекты - четкие границы */
+  box-shadow: none !important;
+  transform: scale(1);
+  outline: none;
+  filter: none;
+}
+
+.social-btn-flat:hover {
+  background: var(--platform-color);
+  border-color: var(--platform-color);
+  transform: scale(1.05);
+  box-shadow: none !important;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.social-btn-flat:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+  box-shadow: none !important;
+}
+
+/* Принудительно убираем все тени */
+.social-btn-flat,
+.social-btn-flat:hover,
+.social-btn-flat:active,
+.social-btn-flat:focus {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  text-shadow: none !important;
+}
+
+/* Shimmer effect - упрощенный */
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.social-btn-flat:hover .shimmer-effect {
+  transform: translateX(100%);
+}
+
+/* Button content */
+.btn-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat i {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat:hover i {
+  color: #fff;
+}
+
+/* Пользовательские логотипы */
+.custom-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1); /* Делаем белыми */
+}
+
+.social-btn-flat:hover .custom-logo {
+  filter: brightness(0) invert(1);
+  transform: scale(1.1);
+}
+
+/* Специальные настройки для черно-белых логотипов */
+.social-btn-flat[data-platform="youtube"] .custom-logo,
+.social-btn-flat[data-platform="telegram"] .custom-logo,
+.social-btn-flat[data-platform="patreon"] .custom-logo {
+  filter: brightness(0) invert(1);
+}
+
+.social-btn-flat[data-platform="youtube"]:hover .custom-logo,
+.social-btn-flat[data-platform="telegram"]:hover .custom-logo,
+.social-btn-flat[data-platform="patreon"]:hover .custom-logo {
+  filter: brightness(0) invert(1);
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Размеры кнопок */
+.social-btn-small {
+  width: 50px;
+  height: 50px;
+  padding: 0.5rem;
+}
+
+.social-btn-small .btn-text {
+  display: none;
+}
+
+.social-btn-small i {
+  font-size: 1em;
+}
+
+.social-btn-small .custom-logo {
+  width: 50%;
+  height: 50%;
+}
+
+.social-btn-medium {
+  width: 70px;
+  height: 70px;
+  padding: 1rem;
+}
+
+.social-btn-medium .btn-text {
+  display: none;
+}
+
+.social-btn-medium i {
+  font-size: 1.4em;
+}
+
+.social-btn-medium .custom-logo {
+  width: 60%;
+  height: 60%;
+}
+
+.social-btn-large {
+  width: 90px;
+  height: 90px;
+  padding: 1.5rem;
+}
+
+.social-btn-large .btn-text {
+  display: none;
+}
+
+.social-btn-large i {
+  font-size: 2em;
+}
+
+.social-btn-large .custom-logo {
+  width: 70%;
+  height: 70%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .social-buttons-flat {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-flat {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .social-btn-medium {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .social-btn-large {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.social-btn-flat {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.social-btn-flat:nth-child(1) { animation-delay: 0.1s; }
+.social-btn-flat:nth-child(2) { animation-delay: 0.2s; }
+.social-btn-flat:nth-child(3) { animation-delay: 0.3s; }
+.social-btn-flat:nth-child(4) { animation-delay: 0.4s; }
+.social-btn-flat:nth-child(5) { animation-delay: 0.5s; }
+.social-btn-flat:nth-child(6) { animation-delay: 0.6s; }
+.social-btn-flat:nth-child(7) { animation-delay: 0.7s; }
+.social-btn-flat:nth-child(8) { animation-delay: 0.8s; }
+.social-btn-flat:nth-child(9) { animation-delay: 0.9s; }
+.social-btn-flat:nth-child(10) { animation-delay: 1s; }
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  .social-btn-flat {
+    background: #2a2a2a;
+    border-color: #666;
+    box-shadow: none !important;
+    filter: none;
+  }
+}
+</style> 

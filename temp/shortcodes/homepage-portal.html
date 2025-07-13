@@ -1,0 +1,958 @@
+<!-- News Portal Homepage -->
+<div class="news-portal">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ i18n "club_title" | default "КЛУБ МЕДОЇДІВ" }}</h1>
+      <p class="hero-subtitle">{{ i18n "club_subtitle" | default "Аналітичний клуб про енергетику, геополітику та сучасний світ" }}</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">{{ len (where .Site.Pages "Section" "news") }}</span>
+          <span class="stat-label">{{ i18n "news" | default "Новини" }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">{{ len (where .Site.Pages "Section" "articles") }}</span>
+          <span class="stat-label">{{ i18n "articles" | default "Статті" }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">393</span>
+          <span class="stat-label">{{ i18n "videos" | default "Відео" }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Grid -->
+  <div class="content-grid">
+    <!-- Featured News Section -->
+    <section class="featured-section">
+      <div class="section-header">
+        <h2 class="section-title">{{ i18n "featured_news" | default "Головні новини" }}</h2>
+        <a href="/news/" class="view-all-link">{{ i18n "view_all" | default "Дивитися все" }}</a>
+      </div>
+      
+      <div class="featured-grid">
+        {{ range first 3 (where .Site.Pages "Section" "news") }}
+        <article class="news-card">
+          <div class="card-image">
+            {{ if .Params.cover }}
+              <img src="{{ .Params.cover }}" alt="{{ .Title }}" loading="lazy">
+            {{ else }}
+              <div class="placeholder-image">📰</div>
+            {{ end }}
+            <div class="card-overlay">
+              <span class="card-category">{{ .Params.category | default "Новини" }}</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h3>
+            <p class="card-excerpt">{{ .Summary | truncate 120 }}</p>
+            <div class="card-meta">
+              <time class="card-date">{{ .Date.Format "2 January 2006" }}</time>
+              <span class="read-time">{{ div (countwords .Content) 200 | add 1 }} хв читання</span>
+            </div>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Categories -->
+      <section class="widget">
+        <h3 class="widget-title">{{ i18n "categories" | default "Категорії" }}</h3>
+        <div class="category-list">
+          <a href="/news/" class="category-item">
+            <span class="category-icon">📰</span>
+            <span class="category-name">{{ i18n "news" | default "Новини" }}</span>
+            <span class="category-count">{{ len (where .Site.Pages "Section" "news") }}</span>
+          </a>
+          <a href="/articles/" class="category-item">
+            <span class="category-icon">📝</span>
+            <span class="category-name">{{ i18n "articles" | default "Статті" }}</span>
+            <span class="category-count">{{ len (where .Site.Pages "Section" "articles") }}</span>
+          </a>
+          <a href="/youtube/" class="category-item">
+            <span class="category-icon">🎥</span>
+            <span class="category-name">YouTube</span>
+            <span class="category-count">393</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Social Links -->
+      <section class="widget">
+        <h3 class="widget-title">{{ i18n "follow_us" | default "Слідкуйте за нами" }}</h3>
+        <div class="social-links">
+          <a href="https://youtube.com/@medoyid-club" class="social-link youtube">
+            <span class="social-icon">🎥</span>
+            <span class="social-name">YouTube</span>
+          </a>
+          <a href="https://t.me/medoyid_club" class="social-link telegram">
+            <span class="social-icon">💬</span>
+            <span class="social-name">Telegram</span>
+          </a>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <!-- Recent Articles Section -->
+  <section class="articles-section">
+    <div class="section-header">
+      <h2 class="section-title">{{ i18n "recent_articles" | default "Нові статті" }}</h2>
+      <a href="/articles/" class="view-all-link">{{ i18n "view_all" | default "Дивитися все" }}</a>
+    </div>
+    
+    <div class="articles-grid">
+      {{ range first 6 (where .Site.Pages "Section" "articles") }}
+      <article class="article-card">
+        <div class="article-header">
+          {{ if .Params.category }}
+          <span class="article-category">{{ .Params.category }}</span>
+          {{ end }}
+          <time class="article-date">{{ .Date.Format "2 Jan" }}</time>
+        </div>
+        <h3 class="article-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="article-excerpt">{{ .Summary | truncate 100 }}</p>
+        <div class="article-meta">
+          <span class="read-time">{{ div (countwords .Content) 200 | add 1 }} хв</span>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+</div>
+
+<style>
+/* Современный темный дизайн с боковым меню и красивой сеткой */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background: #1a1a1a !important;
+    color: #e0e0e0 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    overflow-x: hidden !important;
+}
+
+/* Полноширинный контейнер */
+.homepage-portal {
+    width: 100vw;
+    min-height: 100vh;
+    background: #1a1a1a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    color: #e0e0e0;
+    position: relative;
+}
+
+/* БОКОВОЕ МЕНЮ */
+.sidebar-menu {
+    width: 280px;
+    background: linear-gradient(180deg, #2d2d2d 0%, #252525 100%);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    border-right: 1px solid #404040;
+}
+
+.logo-section {
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.logo::before {
+    content: '✦';
+    font-size: 30px;
+    color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.menu-nav {
+    padding: 20px 0;
+}
+
+.nav-item {
+    margin-bottom: 4px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 25px;
+    color: #b0b0b0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    position: relative;
+    border-radius: 0;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.15) 0%, transparent 100%);
+    color: #e0e0e0;
+    padding-left: 30px;
+    transform: translateX(5px);
+}
+
+.nav-link.active {
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.25) 0%, transparent 100%);
+    color: #667eea;
+    font-weight: 600;
+}
+
+.nav-link.active::before {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.nav-icon {
+    font-size: 22px;
+    width: 24px;
+    text-align: center;
+    filter: grayscale(0.4) brightness(0.8);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover .nav-icon,
+.nav-link.active .nav-icon {
+    filter: none;
+    transform: scale(1.1);
+}
+
+/* Языковой переключатель */
+.language-section {
+    padding: 25px 20px;
+    border-top: 1px solid #404040;
+    margin-top: auto;
+    background: linear-gradient(180deg, #262626 0%, #1f1f1f 100%);
+}
+
+.language-switcher {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.lang-link {
+    padding: 10px 16px;
+    border-radius: 25px;
+    color: #888;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.4s ease;
+    border: 2px solid #404040;
+    background: #2d2d2d;
+    position: relative;
+    overflow: hidden;
+}
+
+.lang-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.lang-link:hover::before {
+    left: 100%;
+}
+
+.lang-link:hover {
+    border-color: #667eea;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+.lang-link.active {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* ОСНОВНОЙ КОНТЕНТ */
+.main-content {
+    margin-left: 280px;
+    flex: 1;
+    min-height: 100vh;
+    background: #1a1a1a;
+    width: calc(100vw - 280px);
+}
+
+/* Верхняя панель */
+.top-bar {
+    background: linear-gradient(90deg, #2d2d2d 0%, #252525 100%);
+    padding: 20px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #404040;
+}
+
+.breadcrumb {
+    color: #888;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 14px 20px 14px 50px;
+    border: 2px solid #404040;
+    border-radius: 30px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.4s ease;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-input::placeholder {
+    color: #666;
+}
+
+.search-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: #262626;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 18px;
+}
+
+/* Hero секция */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="none"><path d="M0,0 C150,100 350,0 500,50 C650,100 850,0 1000,50 L1000,0 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+    background-size: 100% 200px;
+    animation: wave 20s linear infinite;
+}
+
+@keyframes wave {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    opacity: 0.95;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    display: block;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* КРАСИВАЯ СЕТКА КОНТЕНТА */
+.content-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Секция новостей с сеткой */
+.news-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 35px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* КРАСИВЫЕ КАРТОЧКИ НОВОСТЕЙ */
+.news-card {
+    background: linear-gradient(145deg, #2d2d2d, #252525);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(102, 126, 234, 0.1);
+    transition: all 0.5s ease;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.news-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, rgba(102, 126, 234, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.news-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 
+        0 25px 80px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(102, 126, 234, 0.3),
+        0 0 30px rgba(102, 126, 234, 0.2);
+}
+
+.news-card:hover::before {
+    opacity: 1;
+}
+
+.news-image {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    position: relative;
+    overflow: hidden;
+}
+
+.news-image::before {
+    content: '📰';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.4;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+    50% { transform: translate(-50%, -50%) translateY(-10px); }
+}
+
+.news-content {
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.news-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.news-date {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.news-category {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.news-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.news-card:hover .news-title {
+    color: #667eea;
+}
+
+.news-excerpt {
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.4s ease;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.read-more:hover {
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* КРАСИВЫЙ САЙДБАР */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.widget {
+    background: linear-gradient(145deg, #2d2d2d, #252525);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(102, 126, 234, 0.1);
+    border: 1px solid #404040;
+    transition: all 0.3s ease;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 15px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(102, 126, 234, 0.2);
+}
+
+.widget-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #404040;
+    position: relative;
+}
+
+.widget-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+/* YouTube виджет */
+.youtube-widget .video-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #404040;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.youtube-widget .video-item:last-child {
+    border-bottom: none;
+}
+
+.youtube-widget .video-item:hover {
+    background: #3a3a3a;
+    padding: 15px;
+    margin: 0 -15px;
+    transform: translateX(5px);
+}
+
+.video-thumb {
+    width: 85px;
+    height: 65px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 12px;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+    overflow: hidden;
+}
+
+.video-thumb::before {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.4rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.video-thumb:hover::before {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.video-info h4 {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    margin-bottom: 6px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.video-meta {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Категории виджет */
+.categories-widget .category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #404040;
+    transition: all 0.3s ease;
+}
+
+.categories-widget .category-item:last-child {
+    border-bottom: none;
+}
+
+.categories-widget .category-item:hover {
+    color: #667eea;
+    transform: translateX(8px);
+}
+
+.category-name {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.categories-widget .category-item:hover .category-name {
+    color: #667eea;
+}
+
+.category-count {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Соцсети */
+.social-widget {
+    text-align: center;
+}
+
+.social-widget p {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+.social-link:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .sidebar-menu {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .sidebar-menu.open {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+        width: 100vw;
+    }
+    
+    .top-bar {
+        padding: 15px 20px;
+    }
+    
+    .search-bar {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .content-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .widget {
+        padding: 20px;
+    }
+}
+</style> 

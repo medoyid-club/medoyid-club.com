@@ -1,0 +1,237 @@
+{{- $recent := .Get "recent" | default "6" -}}
+{{- $playlist := .Get "playlist" -}}
+{{- $category := .Get "category" -}}
+{{- $columns := .Get "columns" | default "3" -}}
+
+{{- $videos := slice -}}
+
+{{- if $playlist -}}
+  {{- $playlistData := index site.Data.youtube.all_videos $playlist -}}
+  {{- if $playlistData -}}
+    {{- $videos = $playlistData.videos -}}
+  {{- end -}}
+{{- else if $category -}}
+  {{- range where site.RegularPages "Section" "youtube" -}}
+    {{- if eq .Params.category $category -}}
+      {{- $videos = $videos | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- $videos = site.Data.youtube.recent_videos | default slice -}}
+{{- end -}}
+
+{{- $recentInt := int $recent -}}
+{{- $videos = first $recentInt $videos -}}
+
+<div class="youtube-grid" data-columns="{{ $columns }}">
+  {{- range $videos -}}
+    <div class="youtube-card">
+      <div class="youtube-thumbnail">
+        {{- if .Params.youtube_id -}}
+          <img src="https://img.youtube.com/vi/{{ .Params.youtube_id }}/maxresdefault.jpg" 
+               alt="{{ .Title }}" 
+               loading="lazy">
+          <div class="play-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+          <div class="duration">{{ .Params.duration | default "00:00" }}</div>
+        {{- else if .snippet -}}
+          <img src="{{ if .snippet.thumbnails.maxres }}{{ .snippet.thumbnails.maxres.url }}{{ else }}{{ .snippet.thumbnails.high.url }}{{ end }}" 
+               alt="{{ .snippet.title }}" 
+               loading="lazy">
+          <div class="play-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+          <div class="duration">{{ .contentDetails.duration | default "00:00" }}</div>
+        {{- end -}}
+      </div>
+      
+      <div class="youtube-content">
+        <h3 class="youtube-title">
+          {{- if .Params.youtube_id -}}
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          {{- else if .id -}}
+            <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener">
+              {{ .snippet.title }}
+            </a>
+          {{- end -}}
+        </h3>
+        
+        <div class="youtube-meta">
+          {{- if .Params.view_count -}}
+            <span class="views">{{ .Params.view_count | humanize }} просмотров</span>
+          {{- else if .statistics -}}
+            <span class="views">{{ .statistics.viewCount | humanize }} просмотров</span>
+          {{- end -}}
+          
+          {{- if .Date -}}
+            <span class="date">{{ .Date.Format "2 Jan 2006" }}</span>
+          {{- else if .snippet.publishedAt -}}
+            <span class="date">{{ dateFormat "2 Jan 2006" .snippet.publishedAt }}</span>
+          {{- end -}}
+        </div>
+        
+        {{- if .Params.description -}}
+          <p class="youtube-description">{{ .Params.description | truncate 120 }}</p>
+        {{- else if .snippet.description -}}
+          <p class="youtube-description">{{ .snippet.description | truncate 120 }}</p>
+        {{- end -}}
+      </div>
+    </div>
+  {{- end -}}
+</div>
+
+<style>
+.youtube-grid {
+  display: grid;
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.youtube-grid[data-columns="1"] { grid-template-columns: 1fr; }
+.youtube-grid[data-columns="2"] { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.youtube-grid[data-columns="3"] { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.youtube-grid[data-columns="4"] { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.youtube-card {
+  background: var(--entry);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+  border-color: var(--secondary);
+}
+
+.youtube-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  background: #000;
+}
+
+.youtube-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.youtube-card:hover .youtube-thumbnail img {
+  transform: scale(1.05);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff0000;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.youtube-card:hover .play-button {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+  background: rgba(255, 255, 255, 1);
+}
+
+.duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.youtube-content {
+  padding: 16px;
+}
+
+.youtube-title {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.youtube-title a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.youtube-title a:hover {
+  color: var(--secondary);
+}
+
+.youtube-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.youtube-description {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .youtube-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  
+  .youtube-content {
+    padding: 12px;
+  }
+  
+  .play-button {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .youtube-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .youtube-title {
+    font-size: 1rem;
+  }
+}
+</style> 

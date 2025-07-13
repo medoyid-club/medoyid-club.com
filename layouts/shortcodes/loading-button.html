@@ -1,0 +1,220 @@
+{{- $text := .Get "text" | default "Завантажити" -}}
+{{- $loading_text := .Get "loading_text" | default "Завантаження..." -}}
+{{- $id := .Get "id" | default (printf "loading-btn-%d" now.Unix) -}}
+{{- $style := .Get "style" | default "primary" -}}
+{{- $size := .Get "size" | default "medium" -}}
+
+<button class="loading-button loading-{{ $style }} loading-{{ $size }}" id="{{ $id }}" onclick="startLoading('{{ $id }}')">
+  <span class="button-text">{{ $text }}</span>
+  <span class="loading-text" style="display: none;">{{ $loading_text }}</span>
+  <span class="loading-spinner" style="display: none;">
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+    <span class="spinner-dot"></span>
+  </span>
+</button>
+
+<script>
+function startLoading(buttonId) {
+  const button = document.getElementById(buttonId);
+  const buttonText = button.querySelector('.button-text');
+  const loadingText = button.querySelector('.loading-text');
+  const spinner = button.querySelector('.loading-spinner');
+  
+  // Показываем состояние загрузки
+  buttonText.style.display = 'none';
+  loadingText.style.display = 'inline';
+  spinner.style.display = 'inline-flex';
+  button.disabled = true;
+  button.classList.add('loading-active');
+  
+  // Симуляция загрузки (для демо)
+  setTimeout(() => {
+    buttonText.style.display = 'inline';
+    loadingText.style.display = 'none';
+    spinner.style.display = 'none';
+    button.disabled = false;
+    button.classList.remove('loading-active');
+  }, 3000);
+}
+</script>
+
+<style>
+.loading-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.loading-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.loading-button:hover::before {
+  left: 100%;
+}
+
+.loading-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.loading-button:disabled::before {
+  display: none;
+}
+
+/* Размеры */
+.loading-small {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  min-height: 32px;
+}
+
+.loading-medium {
+  padding: 12px 24px;
+  font-size: 1rem;
+  min-height: 40px;
+}
+
+.loading-large {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  min-height: 48px;
+}
+
+/* Стили */
+.loading-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+}
+
+.loading-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.loading-success {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+  color: white;
+}
+
+.loading-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.4);
+}
+
+.loading-danger {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+}
+
+.loading-danger:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.loading-warning {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+  color: white;
+}
+
+.loading-warning:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 154, 158, 0.4);
+}
+
+.loading-dark {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  color: white;
+}
+
+.loading-dark:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+/* Спиннер */
+.loading-spinner {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.spinner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+
+.spinner-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.spinner-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.spinner-dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Активное состояние загрузки */
+.loading-active {
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+}
+
+/* Анимация нажатия */
+.loading-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+/* Тёмная тема */
+[data-theme="dark"] .loading-button {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .loading-button:hover:not(:disabled) {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+</style> 

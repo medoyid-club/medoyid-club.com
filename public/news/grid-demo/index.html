@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="uk">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
+<html lang="uk" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Сітка контенту в стилі Дзен | Клуб Медоедів</title>
+<title>Сітка контенту в стилі Дзен | Клуб Медоїдів</title>
 <meta name="keywords" content="дизайн, ui, сітка">
 <meta name="description" content="Демонстрація адаптивної сітки контенту в стилі Яндекс Дзен">
 <meta name="author" content="Медоїди">
 <link rel="canonical" href="http://localhost:1313/news/grid-demo/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css" integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9290e41777b911b53e6dc761814059917b028407d03163cdc7a4de21ce834c26.css" integrity="sha256-kpDkF3e5EbU&#43;bcdhgUBZkXsChAfQMWPNx6TeIc6DTCY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -29,100 +28,148 @@
 
     </style>
 </noscript>
-    <link rel="stylesheet" href="/css/custom.css">
-  </head>
-  <body>
-    <div class="container" style="min-height:100vh;display:flex;flex-direction:row;">
-      
-      <aside style="width:260px;min-width:200px;max-width:300px;padding:2em 1em 2em 2em;">
-        <nav>
-  <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1em;">
-    <li><a class="menu active" href="/"><img src="/icons/home.svg" alt="Головна" style="width:20px;vertical-align:middle;margin-right:8px;">Головна</a></li>
-    <li><a class="menu" href="#novyny"><img src="/icons/news-off.svg" alt="Новини" style="width:20px;vertical-align:middle;margin-right:8px;">Новини</a></li>
-    <li><a class="menu" href="#library"><img src="/icons/books.svg" alt="Бібліотека" style="width:20px;vertical-align:middle;margin-right:8px;">Бібліотека</a></li>
-    <li><a class="menu" href="#recommend"><img src="/icons/adjustments-star.svg" alt="Рекомендації" style="width:20px;vertical-align:middle;margin-right:8px;">Рекомендації</a></li>
-    <li><a class="menu" href="#premium"><img src="/icons/crown.svg" alt="Преміум" style="width:20px;vertical-align:middle;margin-right:8px;">Преміум</a></li>
-    <li><a class="menu" href="#team"><img src="/icons/users-group.svg" alt="Команда" style="width:20px;vertical-align:middle;margin-right:8px;">Команда</a></li>
-    <li><a class="menu" href="#about"><img src="/icons/info-circle.svg" alt="Про проект" style="width:20px;vertical-align:middle;margin-right:8px;">Про проект</a></li>
-  </ul>
-  <div style="margin-top:2em;display:flex;gap:0.5em;">
-    <a href="#" class="button"><img src="/icons/brand-telegram.svg" alt="Telegram"></a>
-    <a href="#" class="button"><img src="/icons/brand-youtube.svg" alt="YouTube"></a>
-    <a href="#" class="button"><img src="/icons/brand-facebook.svg" alt="Facebook"></a>
-    <a href="#" class="button"><img src="/icons/brand-instagram.svg" alt="Instagram"></a>
-  </div>
-</nav>
+</head>
 
-<style>
-.menu {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  border-radius: 7px;
-  border: 1px solid rgb(61, 106, 255);
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
-  background: transparent;
-  color: #fff;
-  text-decoration: none;
-  margin-bottom: 2px;
-  transition: all 0.2s ease-in;
-}
-.menu:hover, .menu.active {
-  background: rgb(61, 106, 255);
-  color: #fff;
-  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
-  text-decoration: none;
-}
-.menu img {
-  margin-right: 8px;
-}
-.button {
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  border: none;
-  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
-  position: relative;
-  z-index: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-  transition: 0.1s;
-}
-.button svg, .button img {
-  color: white;
-  width: 30px;
-  height: 30px;
-  z-index: 9;
-}
-.button:active {
-  transform: scale(0.85);
-}
-.button::before {
-  content: "";
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  background-color: #212121;
-  border-radius: 50px;
-  z-index: -1;
-  border: 0px solid rgba(255, 255, 255, 0.411);
-  transition: 0.4s;
-}
-.button:hover::before {
-  width: 0px;
-  height: 0px;
-}
-</style> 
-      </aside>
-      
-      <main style="flex:1;min-width:0;padding:2em;">
-        
+<body class=" dark" id="top" data-page-url="/news/grid-demo/">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <div class="header-top">
+        <div class="logo-container">
+            <a href="http://localhost:1313/" accesskey="h" title="Клуб Медоїдів (Alt + H)">
+                <img src="/img/logo.svg" alt="logo" class="custom-logo custom-logo-svg" />
+                <span>Клуб Медоїдів</span>
+            </a>
+        </div>
+
+        <div class="header-actions">
+            <a href="http://localhost:1313/search" class="action-icon" aria-label="search" title="Search (Alt + /)" accesskey="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </a>
+            <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme" class="action-icon">
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <nav class="nav header-nav">
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Головна">
+                    <span>Головна</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/news/" title="Новини">
+                    <span>Новини</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/library/" title="YouTube">
+                    <span>YouTube</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/recommend/" title="Рекомендації">
+                    <span>Рекомендації</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="Про нас">
+                    <span>Про нас</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/premium/" title="Преміум">
+                    <span>Преміум</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main custom-layout"><aside class="left-column">
+                <nav class="sidebar-menu">
+    <ul><li>
+            <a href="http://localhost:1313/news/"><span class="menu-icon"><!--
+category: Document
+tags: [newspaper, article]
+version: "1.0"
+unicode: "eafd"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
+  <path d="M8 8l4 0" />
+  <path d="M8 12l4 0" />
+  <path d="M8 16l4 0" />
+</svg>
+</span><span class="menu-text">Стрічка новин</span>
+            </a>
+        </li><li>
+            <a href="http://localhost:1313/news/popular/"><span class="menu-icon"></span><span class="menu-text">Популярне</span>
+            </a>
+        </li><li>
+            <a href="http://localhost:1313/categories/"><span class="menu-icon"><!--
+tags: [statistics, data, value, variable, scale, statistical, bar, information, report]
+category: Charts
+version: "1.39"
+unicode: "ee30"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+  <path d="M7 3v4h4" />
+  <path d="M9 17l0 4" />
+  <path d="M17 14l0 7" />
+  <path d="M13 13l0 8" />
+  <path d="M21 12l0 9" />
+</svg>
+</span><span class="menu-text">Категорії</span>
+            </a>
+        </li></ul>
+</nav>
+            </aside>
+            <div class="center-column">
+                
 
 <article class="post-single">
   <header class="post-header">
@@ -137,10 +184,10 @@
 
 </div>
   </header> 
-  <div class="post-content"><!-- raw HTML omitted -->
+  <div class="post-content"><div class="animated-header">
 <h1 id="сітка-контенту-в-стилі-дзен">Сітка контенту в стилі Дзен<a hidden class="anchor" aria-hidden="true" href="#сітка-контенту-в-стилі-дзен">#</a></h1>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --><strong>Новий дизайн</strong> — Адаптивна сітка для відображення контенту різних типів та розмірів.</p>
+</div>
+<p><span class="pulse-indicator"></span><strong>Новий дизайн</strong> — Адаптивна сітка для відображення контенту різних типів та розмірів.</p>
 <h2 id="-адаптивна-сітка-3-колонки">🏗️ Адаптивна сітка (3 колонки)<a hidden class="anchor" aria-hidden="true" href="#-адаптивна-сітка-3-колонки">#</a></h2>
 
 
@@ -150,7 +197,6 @@
 
 <div class="custom-grid grid-cards" style="--grid-columns:3; --grid-gap:20px;">
   
-
 
 
 
@@ -178,7 +224,7 @@
     <div class="grid-item-excerpt">Аналіз поточної ситуації з енергопостачанням та прогнози на найближчі місяці.</div>
     
   </div>
-</div> 
+</div>
 
 
 
@@ -199,11 +245,9 @@
     <div class="grid-item-date">4 січня 2025</div>
     <div class="grid-item-author">Медоїди</div>
     
-    
-Дослідження впливу інформаційних наративів на формування суспільної думки. Як розпізнати маніпуляції та зберегти критичне мислення в епоху інформаційного хаосу.
-
+    Дослідження впливу інформаційних наративів на формування суспільної думки. Як розпізнати маніпуляції та зберегти критичне мислення в епоху інформаційного хаосу.
   </div>
-</div> 
+</div>
 
 
 
@@ -232,7 +276,7 @@
     <div class="grid-item-excerpt">Огляд ключових факторів, що впливають на ціни нафти в новому році.</div>
     
   </div>
-</div> 
+</div>
 
 
 
@@ -253,13 +297,11 @@
     <div class="grid-item-date">5 січня 2025</div>
     
     
-    
-• Нова технологія накопичення енергії  
-• Зміни в енергетичній політиці ЄС  
-• Розвиток відновлюваних джерел  
-
+    • Нова технологія накопичення енергії<br>
+• Зміни в енергетичній політиці ЄС<br>
+• Розвиток відновлюваних джерел
   </div>
-</div> 
+</div>
 
 
 
@@ -288,7 +330,7 @@
     <div class="grid-item-excerpt">Аналіз впливу геополітичних змін на енергетичну безпеку регіону.</div>
     
   </div>
-</div> 
+</div>
 
 
 
@@ -309,11 +351,10 @@
     <div class="grid-item-date">2 січня 2025</div>
     <div class="grid-item-author">Медоїди</div>
     
-    
-Огляд найцікавіших технологічних рішень у сфері енергетики та їх потенційний вплив на майбутнє.
-
+    Огляд найцікавіших технологічних рішень у сфері енергетики та їх потенційний вплив на майбутнє.
   </div>
-</div> 
+</div>
+
 
 
 </div> 
@@ -326,7 +367,6 @@
 
 <div class="custom-grid grid-modern" style="--grid-columns:auto; --grid-gap:25px;">
   
-
 
 
 
@@ -354,7 +394,7 @@
     <div class="grid-item-excerpt">Шляхи досягнення енергетичної незалежності України.</div>
     
   </div>
-</div> 
+</div>
 
 
 
@@ -375,11 +415,9 @@
     <div class="grid-item-date">4 січня 2025</div>
     <div class="grid-item-author">Медоїди</div>
     
-    
-Перспективи розвитку сонячної та вітрової енергетики в Україні. Аналіз потенціалу та перешкод.
-
+    Перспективи розвитку сонячної та вітрової енергетики в Україні. Аналіз потенціалу та перешкод.
   </div>
-</div> 
+</div>
 
 
 
@@ -408,7 +446,7 @@
     <div class="grid-item-excerpt">Сучасні методи підвищення енергоефективності в промисловості.</div>
     
   </div>
-</div> 
+</div>
 
 
 
@@ -429,17 +467,17 @@
     <div class="grid-item-date">2 січня 2025</div>
     <div class="grid-item-author">Медоїди</div>
     
-    
-Огляд ключових енергетичних партнерств України та їх вплив на національну безпеку.
-
-**Основні напрямки:**
-- Співпраця з ЄС
-- Партнерство з США
-- Регіональні ініціативи
-- Технологічний обмін
+    <p>Огляд ключових енергетичних партнерств України та їх вплив на національну безпеку.</p>
+<p><strong>Основні напрямки:</strong></p>
+<ul>
+<li>Співпраця з ЄС</li>
+<li>Партнерство з США</li>
+<li>Регіональні ініціативи</li>
+<li>Технологічний обмін</li>
+</ul>
 
   </div>
-</div> 
+</div>
 
 
 
@@ -468,7 +506,8 @@
     <div class="grid-item-excerpt">Прорывні технології в енергетичному секторі.</div>
     
   </div>
-</div> 
+</div>
+
 
 
 </div> 
@@ -492,7 +531,6 @@
 
 
 
-
 <div class="grid-item grid-item-normal">
   
   <div class="grid-item-content">
@@ -501,11 +539,9 @@
     <div class="grid-item-date">5 січня 2025</div>
     <div class="grid-item-author">Медоїди</div>
     
-    
-Комплексний підхід до забезпечення енергетичної безпеки держави в умовах глобальної нестабільності.
-
+    Комплексний підхід до забезпечення енергетичної безпеки держави в умовах глобальної нестабільності.
   </div>
-</div> 
+</div>
 
 
 
@@ -526,11 +562,9 @@
     <div class="grid-item-date">4 січня 2025</div>
     <div class="grid-item-author">Медоїди</div>
     
-    
-Впровадження цифрових технологій в енергетичному секторі України. Smart Grid та IoT рішення.
-
+    Впровадження цифрових технологій в енергетичному секторі України. Smart Grid та IoT рішення.
   </div>
-</div> 
+</div>
 
 
 
@@ -551,11 +585,9 @@
     <div class="grid-item-date">3 січня 2025</div>
     <div class="grid-item-author">Медоїди</div>
     
-    
-Останні зміни в енергетичному законодавстві та їх вплив на ринок.
-
+    Останні зміни в енергетичному законодавстві та їх вплив на ринок.
   </div>
-</div> 
+</div>
 
 
 
@@ -576,11 +608,10 @@
     <div class="grid-item-date">2 січня 2025</div>
     <div class="grid-item-author">Медоїди</div>
     
-    
-Аналіз інвестиційних можливостей в українському енергетичному секторі.
-
+    Аналіз інвестиційних можливостей в українському енергетичному секторі.
   </div>
-</div> 
+</div>
+
 
 
 </div> 
@@ -630,23 +661,138 @@
     </ul>
   </footer>
 </article>
-      </main>
-      
-      <aside style="width:320px;min-width:220px;max-width:400px;padding:2em 2em 2em 1em;">
-        <div style="margin-bottom:2em;padding:1.5em;background:rgba(30,30,30,0.85);border-radius:16px;box-shadow:0 2px 12px 0 rgba(0,0,0,0.12);">
-  <h3 style="margin-top:0;">Інформація</h3>
-  <p>Ласкаво просимо до Клубу Медоедів! Тут ви знайдете новини, статті, відео та багато іншого.</p>
+            </div>
+            <aside class="right-column">
+                
+
+
+
+
+<div class="custom-grid grid-cards" style="--grid-columns:1; --grid-gap:30px;">
+  
+
+<div class="grid-item grid-item-normal">
+  <div class="grid-item-content">
+    <div class="grid-item-category">Клуб Медоїдів</div>
+    <h3 class="grid-item-title">Вітаємо!</h3>
+    
+    <div class="grid-item-inner-content">
+      <p>Тут медоїди єднаються думками, як модернізувати Україну та зробити українську державу та суспільство лідерами світу.</p><p><strong>Медоїд медоїду брат, свій до свого по своє.</strong></p>
+    </div><div class="member-footer" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border-color);">
+      <div class="member-socials"><a href="https://www.youtube.com/@honey_erbe" target="_blank" rel="noopener noreferrer" class="social-icon youtube" title="YouTube"><div class="filled"></div><img src="/icons/brand-youtube.svg" alt="YouTube"></a><a href="https://t.me/honeybadgerland" target="_blank" rel="noopener noreferrer" class="social-icon telegram" title="Telegram"><div class="filled"></div><img src="/icons/brand-telegram.svg" alt="Telegram"></a><a href="https://www.patreon.com/c/honey_erbe" target="_blank" rel="noopener noreferrer" class="social-icon patreon" title="Patreon"><div class="filled"></div><img src="/icons/brand-patreon.svg" alt="Patreon"></a><a href="mailto:medoid.club@gmail.com" class="social-icon email" title="Email"><div class="filled"></div><img src="/icons/mail.svg" alt="Email"></a></div>
+    </div></div>
 </div>
-<div style="padding:1.5em;background:rgba(30,30,30,0.85);border-radius:16px;box-shadow:0 2px 12px 0 rgba(0,0,0,0.12);">
-  <h3 style="margin-top:0;">Категорії</h3>
-  <ul style="list-style:none;padding:0;margin:0;">
-    <li><img src="/icons/news.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Новини</li>
-    <li><img src="/icons/articles.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Статті</li>
-    <li><img src="/icons/video.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Відео</li>
-    <li><img src="/icons/other.svg" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Інше</li>
-  </ul>
-</div> 
-      </aside>
-    </div>
-  </body>
-</html> 
+
+
+<div class="grid-item grid-item-normal">
+  <div class="grid-item-content">
+    <div class="grid-item-category">Навігація</div>
+    <h3 class="grid-item-title">Категорії</h3>
+    
+    <div class="grid-item-inner-content">
+      
+      <ul class="widget-category-list">
+        <li><a href="http://localhost:1313/news/"><img src="/icons/news.svg" alt="">Новини</a></li>
+        <li><a href="http://localhost:1313/library/"><img src="/icons/articles.svg" alt="">Статті</a></li>
+        <li><a href="http://localhost:1313/library/"><img src="/icons/video.svg" alt="">Відео</a></li>
+        <li><a href="http://localhost:1313/library/"><img src="/icons/other.svg" alt="">Інше</a></li>
+      </ul>
+    
+    </div></div>
+</div>
+
+</div>
+<style>
+.widget-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.widget-category-list li {
+  margin-bottom: 10px;
+}
+.widget-category-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.widget-category-list img {
+  width: 20px;
+  height: 20px;
+}
+</style>
+
+            </aside></main>
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Клуб Медоїдів</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script></body>
+
+</html>

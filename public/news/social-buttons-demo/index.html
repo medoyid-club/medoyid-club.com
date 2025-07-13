@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="uk" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Демо: Плоские соціальні кнопки з логотипами | Клуб Медоїдів</title>
+<meta name="keywords" content="ui, demo, social, buttons, flat">
+<meta name="description" content="Демонстрація плоских соціальних кнопок з користувацькими SVG логотипами">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/news/social-buttons-demo/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9290e41777b911b53e6dc761814059917b028407d03163cdc7a4de21ce834c26.css" integrity="sha256-kpDkF3e5EbU&#43;bcdhgUBZkXsChAfQMWPNx6TeIc6DTCY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="uk" href="http://localhost:1313/news/social-buttons-demo/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class=" dark" id="top" data-page-url="/news/social-buttons-demo/">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <div class="header-top">
+        <div class="logo-container">
+            <a href="http://localhost:1313/" accesskey="h" title="Клуб Медоїдів (Alt + H)">
+                <img src="/img/logo.svg" alt="logo" class="custom-logo custom-logo-svg" />
+                <span>Клуб Медоїдів</span>
+            </a>
+        </div>
+
+        <div class="header-actions">
+            <a href="http://localhost:1313/search" class="action-icon" aria-label="search" title="Search (Alt + /)" accesskey="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </a>
+            <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme" class="action-icon">
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <nav class="nav header-nav">
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Головна">
+                    <span>Головна</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/news/" title="Новини">
+                    <span>Новини</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/library/" title="YouTube">
+                    <span>YouTube</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/recommend/" title="Рекомендації">
+                    <span>Рекомендації</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="Про нас">
+                    <span>Про нас</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/premium/" title="Преміум">
+                    <span>Преміум</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main custom-layout"><aside class="left-column">
+                <nav class="sidebar-menu">
+    <ul><li>
+            <a href="http://localhost:1313/news/"><span class="menu-icon"><!--
+category: Document
+tags: [newspaper, article]
+version: "1.0"
+unicode: "eafd"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
+  <path d="M8 8l4 0" />
+  <path d="M8 12l4 0" />
+  <path d="M8 16l4 0" />
+</svg>
+</span><span class="menu-text">Стрічка новин</span>
+            </a>
+        </li><li>
+            <a href="http://localhost:1313/news/popular/"><span class="menu-icon"></span><span class="menu-text">Популярне</span>
+            </a>
+        </li><li>
+            <a href="http://localhost:1313/categories/"><span class="menu-icon"><!--
+tags: [statistics, data, value, variable, scale, statistical, bar, information, report]
+category: Charts
+version: "1.39"
+unicode: "ee30"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+  <path d="M7 3v4h4" />
+  <path d="M9 17l0 4" />
+  <path d="M17 14l0 7" />
+  <path d="M13 13l0 8" />
+  <path d="M21 12l0 9" />
+</svg>
+</span><span class="menu-text">Категорії</span>
+            </a>
+        </li></ul>
+</nav>
+            </aside>
+            <div class="center-column">
+                
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Демо: Плоские соціальні кнопки з логотипами
+    </h1>
+    <div class="post-description">
+      Демонстрація плоских соціальних кнопок з користувацькими SVG логотипами
+    </div>
+    <div class="post-meta"><span title='2025-07-12 12:00:00 +0200 +0200'>липня 12, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="плоские-соціальні-кнопки-з-логотипами">Плоские соціальні кнопки з логотипами<a hidden class="anchor" aria-hidden="true" href="#плоские-соціальні-кнопки-з-логотипами">#</a></h1>
+<p>Оновлена версія соціальних кнопок з плоским дизайном та підтримкою користувацьких SVG логотипів.</p>
+<h2 id="основні-особливості">Основні особливості<a hidden class="anchor" aria-hidden="true" href="#основні-особливості">#</a></h2>
+<ul>
+<li><strong>Плоский дизайн</strong> без 3D ефектів</li>
+<li><strong>Користувацькі логотипи</strong> для YouTube, Telegram, Patreon</li>
+<li><strong>Простий shimmer ефект</strong> при наведенні</li>
+<li><strong>Адаптивні розміри</strong> для всіх пристроїв</li>
+<li><strong>Брендові кольори</strong> при hover</li>
+</ul>
+<h2 id="демонстрація">Демонстрація<a hidden class="anchor" aria-hidden="true" href="#демонстрація">#</a></h2>
+<h3 id="з-користувацькими-логотипами">З користувацькими логотипами<a hidden class="anchor" aria-hidden="true" href="#з-користувацькими-логотипами">#</a></h3>
+<div class="social-buttons-flat" style="--grid-columns: auto-fit;"><a href="https://youtube.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="youtube"
+         style="--platform-color: #ff0000;"
+         title="YouTube"
+         aria-label="YouTube"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/Youtube.svg" alt="YouTube" class="social-btn-custom-logo"><span class="btn-text">YouTube</span>
+        </div>
+      </a><a href="https://t.me" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="telegram"
+         style="--platform-color: #0088cc;"
+         title="Telegram"
+         aria-label="Telegram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/telegram.svg" alt="Telegram" class="social-btn-custom-logo"><span class="btn-text">Telegram</span>
+        </div>
+      </a><a href="https://patreon.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="patreon"
+         style="--platform-color: #ff424d;"
+         title="Patreon"
+         aria-label="Patreon"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/patreon.svg" alt="Patreon" class="social-btn-custom-logo"><span class="btn-text">Patreon</span>
+        </div>
+      </a></div>
+
+<style>
+.social-buttons-flat {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(auto-fit, minmax(80px, 1fr)));
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+.social-btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a1a;
+  border: 1px solid #666;
+  box-shadow: none !important;
+  transform: scale(1);
+  outline: none;
+  filter: none;
+}
+
+.social-btn-flat:hover {
+  background: var(--platform-color);
+  border-color: var(--platform-color);
+  transform: scale(1.05);
+}
+
+.social-btn-flat:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.social-btn-flat:hover .shimmer-effect {
+  transform: translateX(100%);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat i {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat:hover i {
+  color: #fff;
+}
+
+.social-btn-flat .social-btn-custom-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn-flat:hover .social-btn-custom-logo {
+  transform: scale(1.1);
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.social-btn-small { width: 50px; height: 50px; padding: 0.5rem; }
+.social-btn-small .btn-text { display: none; }
+.social-btn-small i { font-size: 1em; }
+.social-btn-small .social-btn-custom-logo { width: 50%; height: 50%; }
+
+.social-btn-medium { width: 70px; height: 70px; padding: 1rem; }
+.social-btn-medium .btn-text { display: none; }
+.social-btn-medium i { font-size: 1.4em; }
+.social-btn-medium .social-btn-custom-logo { width: 60%; height: 60%; }
+
+.social-btn-large { width: 90px; height: 90px; padding: 1.5rem; }
+.social-btn-large .btn-text { display: none; }
+.social-btn-large i { font-size: 2em; }
+.social-btn-large .social-btn-custom-logo { width: 70%; height: 70%; }
+
+@media (max-width: 768px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 0.5rem; }
+  .social-btn-medium { width: 60px; height: 60px; }
+  .social-btn-large { width: 70px; height: 70px; }
+}
+
+.social-btn-flat { animation: fadeInUp 0.6s ease-out; }
+.social-btn-flat:nth-child(1) { animation-delay: 0.1s; }
+.social-btn-flat:nth-child(2) { animation-delay: 0.2s; }
+.social-btn-flat:nth-child(3) { animation-delay: 0.3s; }
+.social-btn-flat:nth-child(4) { animation-delay: 0.4s; }
+.social-btn-flat:nth-child(5) { animation-delay: 0.5s; }
+.social-btn-flat:nth-child(6) { animation-delay: 0.6s; }
+.social-btn-flat:nth-child(7) { animation-delay: 0.7s; }
+.social-btn-flat:nth-child(8) { animation-delay: 0.8s; }
+.social-btn-flat:nth-child(9) { animation-delay: 0.9s; }
+.social-btn-flat:nth-child(10) { animation-delay: 1s; }
+
+@media (prefers-color-scheme: dark) {
+  .social-btn-flat { background: #2a2a2a; border-color: #666; }
+}
+</style>
+<h3 id="змішаний-набір-іконки--логотипи">Змішаний набір (іконки + логотипи)<a hidden class="anchor" aria-hidden="true" href="#змішаний-набір-іконки--логотипи">#</a></h3>
+<div class="social-buttons-flat" style="--grid-columns: auto-fit;"><a href="https://facebook.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="facebook"
+         style="--platform-color: #1877f2;"
+         title="Facebook"
+         aria-label="Facebook"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-facebook-f"></i><span class="btn-text">Facebook</span>
+        </div>
+      </a><a href="https://t.me" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="telegram"
+         style="--platform-color: #0088cc;"
+         title="Telegram"
+         aria-label="Telegram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/telegram.svg" alt="Telegram" class="social-btn-custom-logo"><span class="btn-text">Telegram</span>
+        </div>
+      </a><a href="https://youtube.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="youtube"
+         style="--platform-color: #ff0000;"
+         title="YouTube"
+         aria-label="YouTube"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/Youtube.svg" alt="YouTube" class="social-btn-custom-logo"><span class="btn-text">YouTube</span>
+        </div>
+      </a><a href="https://twitter.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="twitter"
+         style="--platform-color: #1da1f2;"
+         title="Twitter"
+         aria-label="Twitter"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-twitter"></i><span class="btn-text">Twitter</span>
+        </div>
+      </a><a href="https://instagram.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="instagram"
+         style="--platform-color: #e4405f;"
+         title="Instagram"
+         aria-label="Instagram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-instagram"></i><span class="btn-text">Instagram</span>
+        </div>
+      </a></div>
+
+<style>
+.social-buttons-flat {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(auto-fit, minmax(80px, 1fr)));
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+.social-btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a1a;
+  border: 1px solid #666;
+  box-shadow: none !important;
+  transform: scale(1);
+  outline: none;
+  filter: none;
+}
+
+.social-btn-flat:hover {
+  background: var(--platform-color);
+  border-color: var(--platform-color);
+  transform: scale(1.05);
+}
+
+.social-btn-flat:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.social-btn-flat:hover .shimmer-effect {
+  transform: translateX(100%);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat i {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat:hover i {
+  color: #fff;
+}
+
+.social-btn-flat .social-btn-custom-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn-flat:hover .social-btn-custom-logo {
+  transform: scale(1.1);
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.social-btn-small { width: 50px; height: 50px; padding: 0.5rem; }
+.social-btn-small .btn-text { display: none; }
+.social-btn-small i { font-size: 1em; }
+.social-btn-small .social-btn-custom-logo { width: 50%; height: 50%; }
+
+.social-btn-medium { width: 70px; height: 70px; padding: 1rem; }
+.social-btn-medium .btn-text { display: none; }
+.social-btn-medium i { font-size: 1.4em; }
+.social-btn-medium .social-btn-custom-logo { width: 60%; height: 60%; }
+
+.social-btn-large { width: 90px; height: 90px; padding: 1.5rem; }
+.social-btn-large .btn-text { display: none; }
+.social-btn-large i { font-size: 2em; }
+.social-btn-large .social-btn-custom-logo { width: 70%; height: 70%; }
+
+@media (max-width: 768px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 0.5rem; }
+  .social-btn-medium { width: 60px; height: 60px; }
+  .social-btn-large { width: 70px; height: 70px; }
+}
+
+.social-btn-flat { animation: fadeInUp 0.6s ease-out; }
+.social-btn-flat:nth-child(1) { animation-delay: 0.1s; }
+.social-btn-flat:nth-child(2) { animation-delay: 0.2s; }
+.social-btn-flat:nth-child(3) { animation-delay: 0.3s; }
+.social-btn-flat:nth-child(4) { animation-delay: 0.4s; }
+.social-btn-flat:nth-child(5) { animation-delay: 0.5s; }
+.social-btn-flat:nth-child(6) { animation-delay: 0.6s; }
+.social-btn-flat:nth-child(7) { animation-delay: 0.7s; }
+.social-btn-flat:nth-child(8) { animation-delay: 0.8s; }
+.social-btn-flat:nth-child(9) { animation-delay: 0.9s; }
+.social-btn-flat:nth-child(10) { animation-delay: 1s; }
+
+@media (prefers-color-scheme: dark) {
+  .social-btn-flat { background: #2a2a2a; border-color: #666; }
+}
+</style>
+<h3 id="великі-кнопки">Великі кнопки<a hidden class="anchor" aria-hidden="true" href="#великі-кнопки">#</a></h3>
+<div class="social-buttons-flat" style="--grid-columns: ZgotmplZ;"><a href="https://youtube.com" 
+         class="social-btn-flat social-btn-large"
+         data-platform="youtube"
+         style="--platform-color: #ff0000;"
+         title="YouTube"
+         aria-label="YouTube"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/Youtube.svg" alt="YouTube" class="social-btn-custom-logo"><span class="btn-text">YouTube</span>
+        </div>
+      </a><a href="https://t.me" 
+         class="social-btn-flat social-btn-large"
+         data-platform="telegram"
+         style="--platform-color: #0088cc;"
+         title="Telegram"
+         aria-label="Telegram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/telegram.svg" alt="Telegram" class="social-btn-custom-logo"><span class="btn-text">Telegram</span>
+        </div>
+      </a><a href="https://patreon.com" 
+         class="social-btn-flat social-btn-large"
+         data-platform="patreon"
+         style="--platform-color: #ff424d;"
+         title="Patreon"
+         aria-label="Patreon"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/patreon.svg" alt="Patreon" class="social-btn-custom-logo"><span class="btn-text">Patreon</span>
+        </div>
+      </a></div>
+
+<style>
+.social-buttons-flat {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(auto-fit, minmax(80px, 1fr)));
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+.social-btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a1a;
+  border: 1px solid #666;
+  box-shadow: none !important;
+  transform: scale(1);
+  outline: none;
+  filter: none;
+}
+
+.social-btn-flat:hover {
+  background: var(--platform-color);
+  border-color: var(--platform-color);
+  transform: scale(1.05);
+}
+
+.social-btn-flat:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.social-btn-flat:hover .shimmer-effect {
+  transform: translateX(100%);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat i {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat:hover i {
+  color: #fff;
+}
+
+.social-btn-flat .social-btn-custom-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn-flat:hover .social-btn-custom-logo {
+  transform: scale(1.1);
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.social-btn-small { width: 50px; height: 50px; padding: 0.5rem; }
+.social-btn-small .btn-text { display: none; }
+.social-btn-small i { font-size: 1em; }
+.social-btn-small .social-btn-custom-logo { width: 50%; height: 50%; }
+
+.social-btn-medium { width: 70px; height: 70px; padding: 1rem; }
+.social-btn-medium .btn-text { display: none; }
+.social-btn-medium i { font-size: 1.4em; }
+.social-btn-medium .social-btn-custom-logo { width: 60%; height: 60%; }
+
+.social-btn-large { width: 90px; height: 90px; padding: 1.5rem; }
+.social-btn-large .btn-text { display: none; }
+.social-btn-large i { font-size: 2em; }
+.social-btn-large .social-btn-custom-logo { width: 70%; height: 70%; }
+
+@media (max-width: 768px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 0.5rem; }
+  .social-btn-medium { width: 60px; height: 60px; }
+  .social-btn-large { width: 70px; height: 70px; }
+}
+
+.social-btn-flat { animation: fadeInUp 0.6s ease-out; }
+.social-btn-flat:nth-child(1) { animation-delay: 0.1s; }
+.social-btn-flat:nth-child(2) { animation-delay: 0.2s; }
+.social-btn-flat:nth-child(3) { animation-delay: 0.3s; }
+.social-btn-flat:nth-child(4) { animation-delay: 0.4s; }
+.social-btn-flat:nth-child(5) { animation-delay: 0.5s; }
+.social-btn-flat:nth-child(6) { animation-delay: 0.6s; }
+.social-btn-flat:nth-child(7) { animation-delay: 0.7s; }
+.social-btn-flat:nth-child(8) { animation-delay: 0.8s; }
+.social-btn-flat:nth-child(9) { animation-delay: 0.9s; }
+.social-btn-flat:nth-child(10) { animation-delay: 1s; }
+
+@media (prefers-color-scheme: dark) {
+  .social-btn-flat { background: #2a2a2a; border-color: #666; }
+}
+</style>
+<h3 id="малі-кнопки">Малі кнопки<a hidden class="anchor" aria-hidden="true" href="#малі-кнопки">#</a></h3>
+<div class="social-buttons-flat" style="--grid-columns: auto-fit;"><a href="https://facebook.com" 
+         class="social-btn-flat social-btn-small"
+         data-platform="facebook"
+         style="--platform-color: #1877f2;"
+         title="Facebook"
+         aria-label="Facebook"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-facebook-f"></i><span class="btn-text">Facebook</span>
+        </div>
+      </a><a href="https://t.me" 
+         class="social-btn-flat social-btn-small"
+         data-platform="telegram"
+         style="--platform-color: #0088cc;"
+         title="Telegram"
+         aria-label="Telegram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/telegram.svg" alt="Telegram" class="social-btn-custom-logo"><span class="btn-text">Telegram</span>
+        </div>
+      </a><a href="https://youtube.com" 
+         class="social-btn-flat social-btn-small"
+         data-platform="youtube"
+         style="--platform-color: #ff0000;"
+         title="YouTube"
+         aria-label="YouTube"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/Youtube.svg" alt="YouTube" class="social-btn-custom-logo"><span class="btn-text">YouTube</span>
+        </div>
+      </a><a href="https://twitter.com" 
+         class="social-btn-flat social-btn-small"
+         data-platform="twitter"
+         style="--platform-color: #1da1f2;"
+         title="Twitter"
+         aria-label="Twitter"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-twitter"></i><span class="btn-text">Twitter</span>
+        </div>
+      </a><a href="https://instagram.com" 
+         class="social-btn-flat social-btn-small"
+         data-platform="instagram"
+         style="--platform-color: #e4405f;"
+         title="Instagram"
+         aria-label="Instagram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-instagram"></i><span class="btn-text">Instagram</span>
+        </div>
+      </a><a href="https://patreon.com" 
+         class="social-btn-flat social-btn-small"
+         data-platform="patreon"
+         style="--platform-color: #ff424d;"
+         title="Patreon"
+         aria-label="Patreon"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/patreon.svg" alt="Patreon" class="social-btn-custom-logo"><span class="btn-text">Patreon</span>
+        </div>
+      </a></div>
+
+<style>
+.social-buttons-flat {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(auto-fit, minmax(80px, 1fr)));
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+.social-btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a1a;
+  border: 1px solid #666;
+  box-shadow: none !important;
+  transform: scale(1);
+  outline: none;
+  filter: none;
+}
+
+.social-btn-flat:hover {
+  background: var(--platform-color);
+  border-color: var(--platform-color);
+  transform: scale(1.05);
+}
+
+.social-btn-flat:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.social-btn-flat:hover .shimmer-effect {
+  transform: translateX(100%);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat i {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat:hover i {
+  color: #fff;
+}
+
+.social-btn-flat .social-btn-custom-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn-flat:hover .social-btn-custom-logo {
+  transform: scale(1.1);
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.social-btn-small { width: 50px; height: 50px; padding: 0.5rem; }
+.social-btn-small .btn-text { display: none; }
+.social-btn-small i { font-size: 1em; }
+.social-btn-small .social-btn-custom-logo { width: 50%; height: 50%; }
+
+.social-btn-medium { width: 70px; height: 70px; padding: 1rem; }
+.social-btn-medium .btn-text { display: none; }
+.social-btn-medium i { font-size: 1.4em; }
+.social-btn-medium .social-btn-custom-logo { width: 60%; height: 60%; }
+
+.social-btn-large { width: 90px; height: 90px; padding: 1.5rem; }
+.social-btn-large .btn-text { display: none; }
+.social-btn-large i { font-size: 2em; }
+.social-btn-large .social-btn-custom-logo { width: 70%; height: 70%; }
+
+@media (max-width: 768px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 0.5rem; }
+  .social-btn-medium { width: 60px; height: 60px; }
+  .social-btn-large { width: 70px; height: 70px; }
+}
+
+.social-btn-flat { animation: fadeInUp 0.6s ease-out; }
+.social-btn-flat:nth-child(1) { animation-delay: 0.1s; }
+.social-btn-flat:nth-child(2) { animation-delay: 0.2s; }
+.social-btn-flat:nth-child(3) { animation-delay: 0.3s; }
+.social-btn-flat:nth-child(4) { animation-delay: 0.4s; }
+.social-btn-flat:nth-child(5) { animation-delay: 0.5s; }
+.social-btn-flat:nth-child(6) { animation-delay: 0.6s; }
+.social-btn-flat:nth-child(7) { animation-delay: 0.7s; }
+.social-btn-flat:nth-child(8) { animation-delay: 0.8s; }
+.social-btn-flat:nth-child(9) { animation-delay: 0.9s; }
+.social-btn-flat:nth-child(10) { animation-delay: 1s; }
+
+@media (prefers-color-scheme: dark) {
+  .social-btn-flat { background: #2a2a2a; border-color: #666; }
+}
+</style>
+<h3 id="повний-набір">Повний набір<a hidden class="anchor" aria-hidden="true" href="#повний-набір">#</a></h3>
+<div class="social-buttons-flat" style="--grid-columns: auto-fit;"><a href="https://facebook.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="facebook"
+         style="--platform-color: #1877f2;"
+         title="Facebook"
+         aria-label="Facebook"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-facebook-f"></i><span class="btn-text">Facebook</span>
+        </div>
+      </a><a href="https://t.me" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="telegram"
+         style="--platform-color: #0088cc;"
+         title="Telegram"
+         aria-label="Telegram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/telegram.svg" alt="Telegram" class="social-btn-custom-logo"><span class="btn-text">Telegram</span>
+        </div>
+      </a><a href="https://youtube.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="youtube"
+         style="--platform-color: #ff0000;"
+         title="YouTube"
+         aria-label="YouTube"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/Youtube.svg" alt="YouTube" class="social-btn-custom-logo"><span class="btn-text">YouTube</span>
+        </div>
+      </a><a href="https://twitter.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="twitter"
+         style="--platform-color: #1da1f2;"
+         title="Twitter"
+         aria-label="Twitter"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-twitter"></i><span class="btn-text">Twitter</span>
+        </div>
+      </a><a href="https://instagram.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="instagram"
+         style="--platform-color: #e4405f;"
+         title="Instagram"
+         aria-label="Instagram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-instagram"></i><span class="btn-text">Instagram</span>
+        </div>
+      </a><a href="https://linkedin.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="linkedin"
+         style="--platform-color: #0077b5;"
+         title="LinkedIn"
+         aria-label="LinkedIn"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-linkedin-in"></i><span class="btn-text">LinkedIn</span>
+        </div>
+      </a><a href="https://tiktok.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="tiktok"
+         style="--platform-color: #000000;"
+         title="TikTok"
+         aria-label="TikTok"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-tiktok"></i><span class="btn-text">TikTok</span>
+        </div>
+      </a><a href="https://discord.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="discord"
+         style="--platform-color: #5865f2;"
+         title="Discord"
+         aria-label="Discord"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-discord"></i><span class="btn-text">Discord</span>
+        </div>
+      </a><a href="https://spotify.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="spotify"
+         style="--platform-color: #1db954;"
+         title="Spotify"
+         aria-label="Spotify"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-spotify"></i><span class="btn-text">Spotify</span>
+        </div>
+      </a><a href="https://whatsapp.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="whatsapp"
+         style="--platform-color: #25d366;"
+         title="WhatsApp"
+         aria-label="WhatsApp"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-whatsapp"></i><span class="btn-text">WhatsApp</span>
+        </div>
+      </a><a href="https://patreon.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="patreon"
+         style="--platform-color: #ff424d;"
+         title="Patreon"
+         aria-label="Patreon"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/patreon.svg" alt="Patreon" class="social-btn-custom-logo"><span class="btn-text">Patreon</span>
+        </div>
+      </a></div>
+
+<style>
+.social-buttons-flat {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(auto-fit, minmax(80px, 1fr)));
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+.social-btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a1a;
+  border: 1px solid #666;
+  box-shadow: none !important;
+  transform: scale(1);
+  outline: none;
+  filter: none;
+}
+
+.social-btn-flat:hover {
+  background: var(--platform-color);
+  border-color: var(--platform-color);
+  transform: scale(1.05);
+}
+
+.social-btn-flat:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.social-btn-flat:hover .shimmer-effect {
+  transform: translateX(100%);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat i {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat:hover i {
+  color: #fff;
+}
+
+.social-btn-flat .social-btn-custom-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn-flat:hover .social-btn-custom-logo {
+  transform: scale(1.1);
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.social-btn-small { width: 50px; height: 50px; padding: 0.5rem; }
+.social-btn-small .btn-text { display: none; }
+.social-btn-small i { font-size: 1em; }
+.social-btn-small .social-btn-custom-logo { width: 50%; height: 50%; }
+
+.social-btn-medium { width: 70px; height: 70px; padding: 1rem; }
+.social-btn-medium .btn-text { display: none; }
+.social-btn-medium i { font-size: 1.4em; }
+.social-btn-medium .social-btn-custom-logo { width: 60%; height: 60%; }
+
+.social-btn-large { width: 90px; height: 90px; padding: 1.5rem; }
+.social-btn-large .btn-text { display: none; }
+.social-btn-large i { font-size: 2em; }
+.social-btn-large .social-btn-custom-logo { width: 70%; height: 70%; }
+
+@media (max-width: 768px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 0.5rem; }
+  .social-btn-medium { width: 60px; height: 60px; }
+  .social-btn-large { width: 70px; height: 70px; }
+}
+
+.social-btn-flat { animation: fadeInUp 0.6s ease-out; }
+.social-btn-flat:nth-child(1) { animation-delay: 0.1s; }
+.social-btn-flat:nth-child(2) { animation-delay: 0.2s; }
+.social-btn-flat:nth-child(3) { animation-delay: 0.3s; }
+.social-btn-flat:nth-child(4) { animation-delay: 0.4s; }
+.social-btn-flat:nth-child(5) { animation-delay: 0.5s; }
+.social-btn-flat:nth-child(6) { animation-delay: 0.6s; }
+.social-btn-flat:nth-child(7) { animation-delay: 0.7s; }
+.social-btn-flat:nth-child(8) { animation-delay: 0.8s; }
+.social-btn-flat:nth-child(9) { animation-delay: 0.9s; }
+.social-btn-flat:nth-child(10) { animation-delay: 1s; }
+
+@media (prefers-color-scheme: dark) {
+  .social-btn-flat { background: #2a2a2a; border-color: #666; }
+}
+</style>
+<h2 id="параметри-використання">Параметри використання<a hidden class="anchor" aria-hidden="true" href="#параметри-використання">#</a></h2>
+<h3 id="базове-використання">Базове використання<a hidden class="anchor" aria-hidden="true" href="#базове-використання">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="social-buttons-flat" style="--grid-columns: auto-fit;"><a href="https://facebook.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="facebook"
+         style="--platform-color: #1877f2;"
+         title="Facebook"
+         aria-label="Facebook"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-facebook-f"></i><span class="btn-text">Facebook</span>
+        </div>
+      </a><a href="https://t.me" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="telegram"
+         style="--platform-color: #0088cc;"
+         title="Telegram"
+         aria-label="Telegram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/telegram.svg" alt="Telegram" class="social-btn-custom-logo"><span class="btn-text">Telegram</span>
+        </div>
+      </a><a href="https://youtube.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="youtube"
+         style="--platform-color: #ff0000;"
+         title="YouTube"
+         aria-label="YouTube"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/Youtube.svg" alt="YouTube" class="social-btn-custom-logo"><span class="btn-text">YouTube</span>
+        </div>
+      </a><a href="https://twitter.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="twitter"
+         style="--platform-color: #1da1f2;"
+         title="Twitter"
+         aria-label="Twitter"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-twitter"></i><span class="btn-text">Twitter</span>
+        </div>
+      </a><a href="https://instagram.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="instagram"
+         style="--platform-color: #e4405f;"
+         title="Instagram"
+         aria-label="Instagram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><i class="fab fa-instagram"></i><span class="btn-text">Instagram</span>
+        </div>
+      </a></div>
+
+<style>
+.social-buttons-flat {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(auto-fit, minmax(80px, 1fr)));
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+.social-btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a1a;
+  border: 1px solid #666;
+  box-shadow: none !important;
+  transform: scale(1);
+  outline: none;
+  filter: none;
+}
+
+.social-btn-flat:hover {
+  background: var(--platform-color);
+  border-color: var(--platform-color);
+  transform: scale(1.05);
+}
+
+.social-btn-flat:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.social-btn-flat:hover .shimmer-effect {
+  transform: translateX(100%);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat i {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat:hover i {
+  color: #fff;
+}
+
+.social-btn-flat .social-btn-custom-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn-flat:hover .social-btn-custom-logo {
+  transform: scale(1.1);
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.social-btn-small { width: 50px; height: 50px; padding: 0.5rem; }
+.social-btn-small .btn-text { display: none; }
+.social-btn-small i { font-size: 1em; }
+.social-btn-small .social-btn-custom-logo { width: 50%; height: 50%; }
+
+.social-btn-medium { width: 70px; height: 70px; padding: 1rem; }
+.social-btn-medium .btn-text { display: none; }
+.social-btn-medium i { font-size: 1.4em; }
+.social-btn-medium .social-btn-custom-logo { width: 60%; height: 60%; }
+
+.social-btn-large { width: 90px; height: 90px; padding: 1.5rem; }
+.social-btn-large .btn-text { display: none; }
+.social-btn-large i { font-size: 2em; }
+.social-btn-large .social-btn-custom-logo { width: 70%; height: 70%; }
+
+@media (max-width: 768px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 0.5rem; }
+  .social-btn-medium { width: 60px; height: 60px; }
+  .social-btn-large { width: 70px; height: 70px; }
+}
+
+.social-btn-flat { animation: fadeInUp 0.6s ease-out; }
+.social-btn-flat:nth-child(1) { animation-delay: 0.1s; }
+.social-btn-flat:nth-child(2) { animation-delay: 0.2s; }
+.social-btn-flat:nth-child(3) { animation-delay: 0.3s; }
+.social-btn-flat:nth-child(4) { animation-delay: 0.4s; }
+.social-btn-flat:nth-child(5) { animation-delay: 0.5s; }
+.social-btn-flat:nth-child(6) { animation-delay: 0.6s; }
+.social-btn-flat:nth-child(7) { animation-delay: 0.7s; }
+.social-btn-flat:nth-child(8) { animation-delay: 0.8s; }
+.social-btn-flat:nth-child(9) { animation-delay: 0.9s; }
+.social-btn-flat:nth-child(10) { animation-delay: 1s; }
+
+@media (prefers-color-scheme: dark) {
+  .social-btn-flat { background: #2a2a2a; border-color: #666; }
+}
+</style>
+</span></span></code></pre></div><h3 id="з-вибором-платформ">З вибором платформ<a hidden class="anchor" aria-hidden="true" href="#з-вибором-платформ">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="social-buttons-flat" style="--grid-columns: auto-fit;"><a href="https://youtube.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="youtube"
+         style="--platform-color: #ff0000;"
+         title="YouTube"
+         aria-label="YouTube"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/Youtube.svg" alt="YouTube" class="social-btn-custom-logo"><span class="btn-text">YouTube</span>
+        </div>
+      </a><a href="https://t.me" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="telegram"
+         style="--platform-color: #0088cc;"
+         title="Telegram"
+         aria-label="Telegram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/telegram.svg" alt="Telegram" class="social-btn-custom-logo"><span class="btn-text">Telegram</span>
+        </div>
+      </a><a href="https://patreon.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="patreon"
+         style="--platform-color: #ff424d;"
+         title="Patreon"
+         aria-label="Patreon"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/patreon.svg" alt="Patreon" class="social-btn-custom-logo"><span class="btn-text">Patreon</span>
+        </div>
+      </a></div>
+
+<style>
+.social-buttons-flat {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(auto-fit, minmax(80px, 1fr)));
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+.social-btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a1a;
+  border: 1px solid #666;
+  box-shadow: none !important;
+  transform: scale(1);
+  outline: none;
+  filter: none;
+}
+
+.social-btn-flat:hover {
+  background: var(--platform-color);
+  border-color: var(--platform-color);
+  transform: scale(1.05);
+}
+
+.social-btn-flat:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.social-btn-flat:hover .shimmer-effect {
+  transform: translateX(100%);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat i {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat:hover i {
+  color: #fff;
+}
+
+.social-btn-flat .social-btn-custom-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn-flat:hover .social-btn-custom-logo {
+  transform: scale(1.1);
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.social-btn-small { width: 50px; height: 50px; padding: 0.5rem; }
+.social-btn-small .btn-text { display: none; }
+.social-btn-small i { font-size: 1em; }
+.social-btn-small .social-btn-custom-logo { width: 50%; height: 50%; }
+
+.social-btn-medium { width: 70px; height: 70px; padding: 1rem; }
+.social-btn-medium .btn-text { display: none; }
+.social-btn-medium i { font-size: 1.4em; }
+.social-btn-medium .social-btn-custom-logo { width: 60%; height: 60%; }
+
+.social-btn-large { width: 90px; height: 90px; padding: 1.5rem; }
+.social-btn-large .btn-text { display: none; }
+.social-btn-large i { font-size: 2em; }
+.social-btn-large .social-btn-custom-logo { width: 70%; height: 70%; }
+
+@media (max-width: 768px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 0.5rem; }
+  .social-btn-medium { width: 60px; height: 60px; }
+  .social-btn-large { width: 70px; height: 70px; }
+}
+
+.social-btn-flat { animation: fadeInUp 0.6s ease-out; }
+.social-btn-flat:nth-child(1) { animation-delay: 0.1s; }
+.social-btn-flat:nth-child(2) { animation-delay: 0.2s; }
+.social-btn-flat:nth-child(3) { animation-delay: 0.3s; }
+.social-btn-flat:nth-child(4) { animation-delay: 0.4s; }
+.social-btn-flat:nth-child(5) { animation-delay: 0.5s; }
+.social-btn-flat:nth-child(6) { animation-delay: 0.6s; }
+.social-btn-flat:nth-child(7) { animation-delay: 0.7s; }
+.social-btn-flat:nth-child(8) { animation-delay: 0.8s; }
+.social-btn-flat:nth-child(9) { animation-delay: 0.9s; }
+.social-btn-flat:nth-child(10) { animation-delay: 1s; }
+
+@media (prefers-color-scheme: dark) {
+  .social-btn-flat { background: #2a2a2a; border-color: #666; }
+}
+</style>
+</span></span></code></pre></div><h3 id="з-налаштуванням-розміру">З налаштуванням розміру<a hidden class="anchor" aria-hidden="true" href="#з-налаштуванням-розміру">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="social-buttons-flat" style="--grid-columns: auto-fit;"><a href="https://youtube.com" 
+         class="social-btn-flat social-btn-large"
+         data-platform="youtube"
+         style="--platform-color: #ff0000;"
+         title="YouTube"
+         aria-label="YouTube"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/Youtube.svg" alt="YouTube" class="social-btn-custom-logo"><span class="btn-text">YouTube</span>
+        </div>
+      </a><a href="https://t.me" 
+         class="social-btn-flat social-btn-large"
+         data-platform="telegram"
+         style="--platform-color: #0088cc;"
+         title="Telegram"
+         aria-label="Telegram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/telegram.svg" alt="Telegram" class="social-btn-custom-logo"><span class="btn-text">Telegram</span>
+        </div>
+      </a></div>
+
+<style>
+.social-buttons-flat {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(auto-fit, minmax(80px, 1fr)));
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+.social-btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a1a;
+  border: 1px solid #666;
+  box-shadow: none !important;
+  transform: scale(1);
+  outline: none;
+  filter: none;
+}
+
+.social-btn-flat:hover {
+  background: var(--platform-color);
+  border-color: var(--platform-color);
+  transform: scale(1.05);
+}
+
+.social-btn-flat:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.social-btn-flat:hover .shimmer-effect {
+  transform: translateX(100%);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat i {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat:hover i {
+  color: #fff;
+}
+
+.social-btn-flat .social-btn-custom-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn-flat:hover .social-btn-custom-logo {
+  transform: scale(1.1);
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.social-btn-small { width: 50px; height: 50px; padding: 0.5rem; }
+.social-btn-small .btn-text { display: none; }
+.social-btn-small i { font-size: 1em; }
+.social-btn-small .social-btn-custom-logo { width: 50%; height: 50%; }
+
+.social-btn-medium { width: 70px; height: 70px; padding: 1rem; }
+.social-btn-medium .btn-text { display: none; }
+.social-btn-medium i { font-size: 1.4em; }
+.social-btn-medium .social-btn-custom-logo { width: 60%; height: 60%; }
+
+.social-btn-large { width: 90px; height: 90px; padding: 1.5rem; }
+.social-btn-large .btn-text { display: none; }
+.social-btn-large i { font-size: 2em; }
+.social-btn-large .social-btn-custom-logo { width: 70%; height: 70%; }
+
+@media (max-width: 768px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 0.5rem; }
+  .social-btn-medium { width: 60px; height: 60px; }
+  .social-btn-large { width: 70px; height: 70px; }
+}
+
+.social-btn-flat { animation: fadeInUp 0.6s ease-out; }
+.social-btn-flat:nth-child(1) { animation-delay: 0.1s; }
+.social-btn-flat:nth-child(2) { animation-delay: 0.2s; }
+.social-btn-flat:nth-child(3) { animation-delay: 0.3s; }
+.social-btn-flat:nth-child(4) { animation-delay: 0.4s; }
+.social-btn-flat:nth-child(5) { animation-delay: 0.5s; }
+.social-btn-flat:nth-child(6) { animation-delay: 0.6s; }
+.social-btn-flat:nth-child(7) { animation-delay: 0.7s; }
+.social-btn-flat:nth-child(8) { animation-delay: 0.8s; }
+.social-btn-flat:nth-child(9) { animation-delay: 0.9s; }
+.social-btn-flat:nth-child(10) { animation-delay: 1s; }
+
+@media (prefers-color-scheme: dark) {
+  .social-btn-flat { background: #2a2a2a; border-color: #666; }
+}
+</style>
+</span></span></code></pre></div><h3 id="з-фіксованою-кількістю-колонок">З фіксованою кількістю колонок<a hidden class="anchor" aria-hidden="true" href="#з-фіксованою-кількістю-колонок">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="social-buttons-flat" style="--grid-columns: ZgotmplZ;"><a href="https://youtube.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="youtube"
+         style="--platform-color: #ff0000;"
+         title="YouTube"
+         aria-label="YouTube"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/Youtube.svg" alt="YouTube" class="social-btn-custom-logo"><span class="btn-text">YouTube</span>
+        </div>
+      </a><a href="https://t.me" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="telegram"
+         style="--platform-color: #0088cc;"
+         title="Telegram"
+         aria-label="Telegram"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/telegram.svg" alt="Telegram" class="social-btn-custom-logo"><span class="btn-text">Telegram</span>
+        </div>
+      </a><a href="https://patreon.com" 
+         class="social-btn-flat social-btn-medium"
+         data-platform="patreon"
+         style="--platform-color: #ff424d;"
+         title="Patreon"
+         aria-label="Patreon"
+         target="_blank" 
+         rel="noopener noreferrer">
+        <div class="shimmer-effect"></div>
+        <div class="btn-content"><img src="/images/social/patreon.svg" alt="Patreon" class="social-btn-custom-logo"><span class="btn-text">Patreon</span>
+        </div>
+      </a></div>
+
+<style>
+.social-buttons-flat {
+  display: grid;
+  grid-template-columns: var(--grid-columns, repeat(auto-fit, minmax(80px, 1fr)));
+  gap: 1rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+.social-btn-flat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a1a;
+  border: 1px solid #666;
+  box-shadow: none !important;
+  transform: scale(1);
+  outline: none;
+  filter: none;
+}
+
+.social-btn-flat:hover {
+  background: var(--platform-color);
+  border-color: var(--platform-color);
+  transform: scale(1.05);
+}
+
+.social-btn-flat:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.social-btn-flat:hover .shimmer-effect {
+  transform: translateX(100%);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat i {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.social-btn-flat:hover i {
+  color: #fff;
+}
+
+.social-btn-flat .social-btn-custom-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn-flat:hover .social-btn-custom-logo {
+  transform: scale(1.1);
+}
+
+.btn-text {
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.social-btn-small { width: 50px; height: 50px; padding: 0.5rem; }
+.social-btn-small .btn-text { display: none; }
+.social-btn-small i { font-size: 1em; }
+.social-btn-small .social-btn-custom-logo { width: 50%; height: 50%; }
+
+.social-btn-medium { width: 70px; height: 70px; padding: 1rem; }
+.social-btn-medium .btn-text { display: none; }
+.social-btn-medium i { font-size: 1.4em; }
+.social-btn-medium .social-btn-custom-logo { width: 60%; height: 60%; }
+
+.social-btn-large { width: 90px; height: 90px; padding: 1.5rem; }
+.social-btn-large .btn-text { display: none; }
+.social-btn-large i { font-size: 2em; }
+.social-btn-large .social-btn-custom-logo { width: 70%; height: 70%; }
+
+@media (max-width: 768px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .social-buttons-flat { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 0.5rem; }
+  .social-btn-medium { width: 60px; height: 60px; }
+  .social-btn-large { width: 70px; height: 70px; }
+}
+
+.social-btn-flat { animation: fadeInUp 0.6s ease-out; }
+.social-btn-flat:nth-child(1) { animation-delay: 0.1s; }
+.social-btn-flat:nth-child(2) { animation-delay: 0.2s; }
+.social-btn-flat:nth-child(3) { animation-delay: 0.3s; }
+.social-btn-flat:nth-child(4) { animation-delay: 0.4s; }
+.social-btn-flat:nth-child(5) { animation-delay: 0.5s; }
+.social-btn-flat:nth-child(6) { animation-delay: 0.6s; }
+.social-btn-flat:nth-child(7) { animation-delay: 0.7s; }
+.social-btn-flat:nth-child(8) { animation-delay: 0.8s; }
+.social-btn-flat:nth-child(9) { animation-delay: 0.9s; }
+.social-btn-flat:nth-child(10) { animation-delay: 1s; }
+
+@media (prefers-color-scheme: dark) {
+  .social-btn-flat { background: #2a2a2a; border-color: #666; }
+}
+</style>
+</span></span></code></pre></div><h2 id="доступні-платформи">Доступні платформи<a hidden class="anchor" aria-hidden="true" href="#доступні-платформи">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Платформа</th>
+          <th>Тип</th>
+          <th>Колір</th>
+          <th>Примітка</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Facebook</td>
+          <td>FontAwesome</td>
+          <td>#1877f2</td>
+          <td>Іконка</td>
+      </tr>
+      <tr>
+          <td>Telegram</td>
+          <td>SVG логотип</td>
+          <td>#0088cc</td>
+          <td>Користувацький</td>
+      </tr>
+      <tr>
+          <td>YouTube</td>
+          <td>SVG логотип</td>
+          <td>#ff0000</td>
+          <td>Користувацький</td>
+      </tr>
+      <tr>
+          <td>Twitter</td>
+          <td>FontAwesome</td>
+          <td>#1da1f2</td>
+          <td>Іконка</td>
+      </tr>
+      <tr>
+          <td>Instagram</td>
+          <td>FontAwesome</td>
+          <td>#e4405f</td>
+          <td>Іконка</td>
+      </tr>
+      <tr>
+          <td>LinkedIn</td>
+          <td>FontAwesome</td>
+          <td>#0077b5</td>
+          <td>Іконка</td>
+      </tr>
+      <tr>
+          <td>TikTok</td>
+          <td>FontAwesome</td>
+          <td>#000000</td>
+          <td>Іконка</td>
+      </tr>
+      <tr>
+          <td>Discord</td>
+          <td>FontAwesome</td>
+          <td>#5865f2</td>
+          <td>Іконка</td>
+      </tr>
+      <tr>
+          <td>Spotify</td>
+          <td>FontAwesome</td>
+          <td>#1db954</td>
+          <td>Іконка</td>
+      </tr>
+      <tr>
+          <td>WhatsApp</td>
+          <td>FontAwesome</td>
+          <td>#25d366</td>
+          <td>Іконка</td>
+      </tr>
+      <tr>
+          <td>Patreon</td>
+          <td>SVG логотип</td>
+          <td>#ff424d</td>
+          <td>Користувацький</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="розміри-кнопок">Розміри кнопок<a hidden class="anchor" aria-hidden="true" href="#розміри-кнопок">#</a></h2>
+<ul>
+<li><strong>small</strong>: 50x50px - тільки іконки/логотипи</li>
+<li><strong>medium</strong>: 70x70px - іконки/логотипи (рекомендовано)</li>
+<li><strong>large</strong>: 90x90px - великі іконки/логотипи</li>
+</ul>
+<h2 id="додавання-власних-логотипів">Додавання власних логотипів<a hidden class="anchor" aria-hidden="true" href="#додавання-власних-логотипів">#</a></h2>
+<p>Щоб додати власний логотип:</p>
+<ol>
+<li>Помістіть SVG файл у папку <code>static/images/social/</code></li>
+<li>Додайте платформу в shortcode з параметром <code>customLogo</code></li>
+<li>Логотип автоматично стане білим на темному фоні</li>
+</ol>
+<h3 id="приклад-структури">Приклад структури:<a hidden class="anchor" aria-hidden="true" href="#приклад-структури">#</a></h3>
+<pre tabindex="0"><code>static/
+  images/
+    social/
+      telegram.svg
+      Youtube.svg
+      patreon.svg
+</code></pre><h2 id="стилі">Стилі<a hidden class="anchor" aria-hidden="true" href="#стилі">#</a></h2>
+<ul>
+<li><strong>Фон</strong>: Темно-сірий (#1a1a1a)</li>
+<li><strong>Границя</strong>: Сіра (#333)</li>
+<li><strong>Hover</strong>: Змінюється на брендовий колір</li>
+<li><strong>Логотипи</strong>: Автоматично стають білими</li>
+<li><strong>Анімація</strong>: Плавне масштабування та shimmer</li>
+</ul>
+<h2 id="адаптивність">Адаптивність<a hidden class="anchor" aria-hidden="true" href="#адаптивність">#</a></h2>
+<ul>
+<li><strong>Десктоп</strong>: Повний розмір кнопок</li>
+<li><strong>Планшет</strong>: Зменшені відступи</li>
+<li><strong>Мобільний</strong>: Компактні розміри</li>
+</ul>
+<p>Всі ефекти оптимізовані для швидкості та працюють плавно на всіх пристроях.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/ui/">Ui</a></li>
+      <li><a href="http://localhost:1313/tags/demo/">Demo</a></li>
+      <li><a href="http://localhost:1313/tags/social/">Social</a></li>
+      <li><a href="http://localhost:1313/tags/buttons/">Buttons</a></li>
+      <li><a href="http://localhost:1313/tags/flat/">Flat</a></li>
+    </ul>
+  </footer>
+</article>
+            </div>
+            <aside class="right-column">
+                
+
+
+
+
+<div class="custom-grid grid-cards" style="--grid-columns:1; --grid-gap:30px;">
+  
+
+<div class="grid-item grid-item-normal">
+  <div class="grid-item-content">
+    <div class="grid-item-category">Клуб Медоїдів</div>
+    <h3 class="grid-item-title">Вітаємо!</h3>
+    
+    <div class="grid-item-inner-content">
+      <p>Тут медоїди єднаються думками, як модернізувати Україну та зробити українську державу та суспільство лідерами світу.</p><p><strong>Медоїд медоїду брат, свій до свого по своє.</strong></p>
+    </div><div class="member-footer" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border-color);">
+      <div class="member-socials"><a href="https://www.youtube.com/@honey_erbe" target="_blank" rel="noopener noreferrer" class="social-icon youtube" title="YouTube"><div class="filled"></div><img src="/icons/brand-youtube.svg" alt="YouTube"></a><a href="https://t.me/honeybadgerland" target="_blank" rel="noopener noreferrer" class="social-icon telegram" title="Telegram"><div class="filled"></div><img src="/icons/brand-telegram.svg" alt="Telegram"></a><a href="https://www.patreon.com/c/honey_erbe" target="_blank" rel="noopener noreferrer" class="social-icon patreon" title="Patreon"><div class="filled"></div><img src="/icons/brand-patreon.svg" alt="Patreon"></a><a href="mailto:medoid.club@gmail.com" class="social-icon email" title="Email"><div class="filled"></div><img src="/icons/mail.svg" alt="Email"></a></div>
+    </div></div>
+</div>
+
+
+<div class="grid-item grid-item-normal">
+  <div class="grid-item-content">
+    <div class="grid-item-category">Навігація</div>
+    <h3 class="grid-item-title">Категорії</h3>
+    
+    <div class="grid-item-inner-content">
+      
+      <ul class="widget-category-list">
+        <li><a href="http://localhost:1313/news/"><img src="/icons/news.svg" alt="">Новини</a></li>
+        <li><a href="http://localhost:1313/library/"><img src="/icons/articles.svg" alt="">Статті</a></li>
+        <li><a href="http://localhost:1313/library/"><img src="/icons/video.svg" alt="">Відео</a></li>
+        <li><a href="http://localhost:1313/library/"><img src="/icons/other.svg" alt="">Інше</a></li>
+      </ul>
+    
+    </div></div>
+</div>
+
+</div>
+<style>
+.widget-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.widget-category-list li {
+  margin-bottom: 10px;
+}
+.widget-category-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.widget-category-list img {
+  width: 20px;
+  height: 20px;
+}
+</style>
+
+            </aside></main>
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Клуб Медоїдів</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script></body>
+
+</html>

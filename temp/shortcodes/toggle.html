@@ -1,0 +1,201 @@
+{{- $id := .Get "id" | default (printf "toggle-%d" now.Unix) -}}
+{{- $label := .Get "label" | default "Toggle" -}}
+{{- $checked := .Get "checked" | default false -}}
+{{- $color := .Get "color" | default "blue" -}}
+{{- $size := .Get "size" | default "medium" -}}
+
+<div class="toggle-wrapper">
+  {{- if $label -}}<label class="toggle-label">{{ $label }}</label>{{- end -}}
+  <label class="toggle-switch toggle-{{ $color }} toggle-{{ $size }}">
+    <input type="checkbox" id="{{ $id }}" aria-label="{{ $label | default "Toggle switch" }}" {{- if $checked }} checked{{- end -}}>
+    <span class="toggle-slider">
+      <span class="toggle-button"></span>
+    </span>
+  </label>
+</div>
+
+<style>
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: var(--primary);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-slider {
+  position: relative;
+  display: block;
+  background: #e2e8f0;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button::before {
+  content: '';
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f1f5f9, #e2e8f0);
+  transition: all 0.3s ease;
+}
+
+/* Размеры */
+.toggle-small .toggle-slider {
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-small .toggle-button {
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-medium .toggle-slider {
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-medium .toggle-button {
+  width: 22px;
+  height: 22px;
+}
+
+.toggle-large .toggle-slider {
+  width: 64px;
+  height: 32px;
+}
+
+.toggle-large .toggle-button {
+  width: 28px;
+  height: 28px;
+}
+
+/* Состояние включено */
+.toggle-switch input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  box-shadow: 
+    inset 0 2px 4px rgba(102, 126, 234, 0.3),
+    0 1px 2px rgba(102, 126, 234, 0.2);
+}
+
+.toggle-switch input:checked + .toggle-slider .toggle-button::before {
+  background: linear-gradient(45deg, #ffffff, #f8fafc);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Анимация переключения */
+.toggle-small input:checked + .toggle-slider .toggle-button {
+  transform: translateX(20px);
+}
+
+.toggle-medium input:checked + .toggle-slider .toggle-button {
+  transform: translateX(24px);
+}
+
+.toggle-large input:checked + .toggle-slider .toggle-button {
+  transform: translateX(32px);
+}
+
+/* Цветовые варианты */
+.toggle-blue input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.toggle-green input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+}
+
+.toggle-red input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+}
+
+.toggle-purple input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.toggle-orange input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.toggle-dark input:checked + .toggle-slider {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+/* Эффекты наведения */
+.toggle-switch:hover .toggle-slider {
+  transform: scale(1.05);
+}
+
+.toggle-switch:hover .toggle-button {
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Эффект фокуса */
+.toggle-switch input:focus + .toggle-slider {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Анимация пульсации при клике */
+.toggle-switch:active .toggle-slider {
+  transform: scale(0.95);
+}
+
+/* Тёмная тема */
+[data-theme="dark"] .toggle-slider {
+  background: #374151;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .toggle-button {
+  background: #f9fafb;
+}
+
+[data-theme="dark"] .toggle-label {
+  color: var(--primary);
+}
+</style> 
